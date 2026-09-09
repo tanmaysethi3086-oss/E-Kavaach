@@ -1,0 +1,487 @@
+<!DOCTYPE html><html class="h-full bg-[#f7f9fd]" lang="en" style="width: 1556px; height: 1540px; overflow: hidden; position: relative;"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>E-KAVACH — Professional Credentials &amp; ABDM Registry</title>
+<!-- Google Fonts: Space Grotesk & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#05192d',
+              dark: '#004d6c',
+              primary: '#05668d',
+              teal: '#00A896',
+              mint: '#02C39A',
+              lightBg: '#f7f9fd',
+              cardBorder: '#e2e8f0',
+              badgeBg: '#eaf4ff'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom styles for medical typography & precise layout -->
+<style data-purpose="base-typography">
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4, .font-display {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+  </style>
+<style data-purpose="custom-scroll-and-effects">
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="h-full flex overflow-hidden bg-[#f7f9fd] text-slate-800 antialiased">
+<!-- BEGIN: LeftSidebar -->
+<aside class="w-64 bg-white border-r border-slate-200 flex flex-col justify-between flex-shrink-0 z-30 select-none" data-purpose="main-navigation-sidebar">
+<!-- Top Section: Brand + Doctor Badge + Nav Links -->
+<div class="flex flex-col">
+<!-- Brand Logo Header -->
+<div class="h-16 px-5 border-b border-slate-100 flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-[#004d6c] flex items-center justify-center text-white shadow-sm"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXFOzrCUclTX-IkzlSmiLqEMy53zEEn18KSMCJzF7RxnQJq-xMJBzlqyaUXuHqzSvxu6ueOGvQ3vhDNylmeensyHwHoTlkEAmuD9f7_0BiWF213XmlTcihb8eHPG6AW-ROqggR1d6pIkJT7n3IAM2N0DhfUg4Z6mThhGkX6-aT8Bs5fOEr3MYJqWoXMI_wPDAP83X-nZea41pKmxvz9INKwTJVhfHETHUOr7BKBxgH75LwzgENy9hIZ1rOK_iBTMWlfrY" alt="E-KAVACH Logo" class="w-full h-full object-contain rounded-lg"></div>
+<div class="flex flex-col">
+<span class="font-display font-bold text-sm tracking-wider text-slate-900 leading-none">E-KAVACH</span>
+<span class="text-[10px] text-slate-400 font-semibold tracking-wider uppercase mt-1">Trauma OS v4.2</span>
+</div>
+</div>
+<!-- Current Active Doctor Identity Card -->
+<div class="p-4 mx-3 mt-3 bg-slate-50 border border-slate-200/80 rounded-xl">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-[#05192d] text-white flex items-center justify-center font-bold text-xs tracking-wider flex-shrink-0 ring-2 ring-slate-200">
+            KM
+          </div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<h4 class="text-xs font-bold text-slate-900 truncate">Dr. Kavitha Menon</h4>
+</div>
+<p class="text-[11px] text-slate-500 truncate leading-tight">Chief Interventional Cardio</p>
+<p class="text-[10px] text-slate-400 truncate mt-0.5">Apollo Greams Trauma Hub</p>
+</div>
+</div>
+<div class="mt-2.5 pt-2 border-t border-slate-200/60 flex items-center gap-1.5">
+<svg class="w-3.5 h-3.5 text-[#00A896]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] font-semibold text-slate-600 truncate tracking-tight">NMC: MD-44912-TN</span>
+</div>
+</div>
+<!-- Main Navigation Menu -->
+<nav aria-label="Main Workstation Navigation" class="px-3 mt-4 space-y-1">
+<!-- Dashboard Link -->
+<a class="flex items-center gap-3 px-3 py-2 text-xs font-medium text-slate-600 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<rect height="7" rx="1.5" width="7" x="3" y="3"></rect>
+<rect height="7" rx="1.5" width="7" x="14" y="3"></rect>
+<rect height="7" rx="1.5" width="7" x="14" y="14"></rect>
+<rect height="7" rx="1.5" width="7" x="3" y="14"></rect>
+</svg>
+          Dashboard
+        </a>
+<!-- Scan Patient QR -->
+<a class="flex items-center gap-3 px-3 py-2 text-xs font-medium text-slate-600 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors" href="pattient_scan.html">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+          Scan Patient QR
+        </a>
+<!-- My Doctor ID -->
+<a class="flex items-center gap-3 px-3 py-2 text-xs font-medium text-slate-600 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+          My Doctor ID
+        </a>
+<!-- Appointments -->
+<a class="flex items-center gap-3 px-3 py-2 text-xs font-medium text-slate-600 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+          Appointments
+        </a>
+<!-- Patients -->
+<a class="flex items-center gap-3 px-3 py-2 text-xs font-medium text-slate-600 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+          Patients
+        </a>
+<!-- Doctor Network -->
+<a class="flex items-center gap-3 px-3 py-2 text-xs font-medium text-slate-600 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+          Doctor Network
+        </a>
+<!-- Messages / Consults -->
+<a class="flex items-center gap-3 px-3 py-2 text-xs font-medium text-slate-600 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+          Messages / Consults
+        </a>
+<!-- Settings (Active Top-Level Item) -->
+<a class="flex items-center gap-3 px-3 py-2 text-xs font-semibold text-white bg-[#004d6c] rounded-lg shadow-sm" href="#">
+<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+          Settings
+        </a>
+</nav>
+</div>
+<!-- Bottom Node Telemetry Status -->
+<div class="p-3 m-3 bg-slate-50 border border-slate-200 rounded-xl">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+<span class="text-[10px] font-bold tracking-wider uppercase text-slate-700">Node Active</span>
+</div>
+<p class="text-[10px] text-slate-500 mt-1 leading-normal">
+        Apollo Trauma Node 09: Connected • 0.12s ping • 99.98% sync
+      </p>
+</div>
+</aside>
+<!-- END: LeftSidebar -->
+<!-- BEGIN: MainContentShell -->
+<div class="flex-1 flex flex-col min-w-0 overflow-hidden">
+<!-- BEGIN: TopBarHeader -->
+<header class="h-16 bg-white border-b border-slate-200 px-6 flex items-center justify-between gap-4 flex-shrink-0 z-20" data-purpose="top-header-bar">
+<!-- Search and Context -->
+<div class="flex items-center gap-4 flex-1 max-w-2xl">
+<!-- Mini Hospital badge -->
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-emerald-50 border border-emerald-200/60 rounded-md">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+<span class="text-[11px] font-semibold text-emerald-800 tracking-tight">E-Kavach</span>
+</div>
+<!-- ABHA Universal Search Bar -->
+<div class="relative flex-1">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<input class="block w-full pl-9 pr-4 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#004d6c] focus:border-[#004d6c]" placeholder="Search patient by ABHA, phone, or name..." type="text">
+</div>
+</div>
+<!-- Live Bay & Quick Header Actions -->
+<div class="flex items-center gap-3">
+<!-- Live Trauma Bay Active Status -->
+<div class="hidden md:flex items-center gap-2 px-3 py-1.5 bg-emerald-50 border border-emerald-200 rounded-full">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="text-xs font-medium text-emerald-800">Live Trauma Bay Active</span>
+</div>
+<!-- Primary Header Action -->
+<button class="flex items-center gap-2 px-3.5 py-1.5 bg-[#004d6c] hover:bg-[#05192d] text-white text-xs font-semibold rounded-lg shadow-sm transition-all focus:ring-2 focus:ring-offset-1 focus:ring-[#004d6c]" type="button">
+<svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="">Export Digital Certificate</span>
+</button>
+<div class="h-6 w-px bg-slate-200 mx-1"></div>
+<!-- Header utility icons -->
+<button aria-label="Notifications" class="p-1.5 text-slate-500 hover:text-slate-800 rounded-lg hover:bg-slate-100 transition" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<button aria-label="Help Documentation" class="p-1.5 text-slate-500 hover:text-slate-800 rounded-lg hover:bg-slate-100 transition" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<!-- Current User Avatar Profile Icon -->
+<div class="w-8 h-8 rounded-full bg-[#05192d] text-white text-xs font-semibold flex items-center justify-center cursor-pointer ring-2 ring-slate-100">
+          KM
+        </div>
+</div>
+</header>
+<!-- END: TopBarHeader -->
+<!-- BEGIN: SubHeaderContextBar -->
+<section class="bg-white border-b border-slate-200 px-8 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4" data-purpose="credential-meta-header">
+<div>
+<div class="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-slate-500 mb-1">
+<span class="text-[#004d6c]">Clinical Profile &amp; Workstation</span>
+<span class="">&gt;</span>
+<span class="text-slate-700">Settings</span>
+<span class="">&gt;</span>
+<span class="text-emerald-700">Professional Credentials &amp; ABDM</span>
+</div>
+<h1 class="text-2xl font-bold text-slate-900 tracking-tight">Professional Credentials &amp; ABDM Registry</h1>
+<p class="text-xs text-slate-500 mt-0.5">
+          Cryptographically verified national medical licensure, clinical prescriber privileges, and institutional hospital authorizations.
+        </p>
+</div>
+<!-- Regulatory Compliance & Security Pill Badges -->
+<div class="flex flex-wrap items-center gap-2.5">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          VERIFIED • ABDM M3
+        </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+          NMC TIER-1 PRESCRIBER
+        </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-medium bg-slate-100 text-slate-600 border border-slate-200">
+          DGHS Synced 2m ago
+        </span>
+</div>
+</section>
+<!-- END: SubHeaderContextBar -->
+<!-- BEGIN: SettingsInnerBody -->
+<div class="flex-1 overflow-y-auto px-8 py-6 bg-[#f7f9fd]">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6">
+<!-- BEGIN: LeftSubNavSettings (Credentials Active) -->
+<aside class="w-full lg:w-64 flex-shrink-0 flex flex-col gap-4">
+<div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden p-1.5 space-y-0.5">
+<!-- Profile Tab -->
+<a class="flex items-center justify-between px-3.5 py-2.5 text-xs font-medium text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="#">
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="">Profile</span>
+</div>
+<svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+<!-- Credentials Tab (ACTIVE) -->
+<a class="flex items-center justify-between px-3.5 py-2.5 text-xs font-semibold text-white bg-[#004d6c] rounded-lg shadow-sm" href="#">
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-emerald-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="">Credentials</span>
+</div>
+<span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500 text-white uppercase tracking-wider">Verified</span>
+</a>
+<!-- Notifications Tab -->
+<a class="flex items-center justify-between px-3.5 py-2.5 text-xs font-medium text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="#">
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="">Notifications</span>
+</div>
+</a>
+<!-- Privacy & Security Tab -->
+<a class="flex items-center justify-between px-3.5 py-2.5 text-xs font-medium text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="#">
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="">Privacy &amp; Security</span>
+</div>
+</a>
+<!-- Connected Devices Tab -->
+<a class="flex items-center justify-between px-3.5 py-2.5 text-xs font-medium text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="#">
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="">Connected Devices</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+</a>
+<!-- Account Tab -->
+<a class="flex items-center justify-between px-3.5 py-2.5 text-xs font-medium text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="#">
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="">Account</span>
+</div>
+</a>
+</div>
+<!-- Cryptographic Vault Status Card -->
+<div class="p-4 bg-white border border-slate-200 rounded-xl shadow-sm text-xs">
+<div class="flex items-center gap-2 text-slate-900 font-semibold mb-1.5">
+<svg class="w-4 h-4 text-[#004d6c]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.099.99-4.328.99-6.632 0-6.075-4.925-11-11-11S-2 5.925-2 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="">Hardware Vault</span>
+</div>
+<p class="text-[11px] text-slate-500 leading-relaxed">
+              ABDM Token Active: YubiKey 5 Bio (Apollo Bay 3 Station). 256-Bit Hardware Token verified with Level-3 PKI signature.
+            </p>
+<div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-400">
+<span class="">Sync Hash: 8F2A...9C01</span>
+<span class="text-emerald-600 font-bold">LOCKED &amp; READY</span>
+</div>
+</div>
+</aside>
+<!-- END: LeftSubNavSettings -->
+<!-- BEGIN: RightMainCredentialsPanel -->
+<main class="flex-1 space-y-6">
+<!-- SECTION: Government Licensure & Registry Identifiers (Matching SCREEN_2 Card expanded) -->
+<section class="bg-white rounded-xl border border-slate-200 shadow-sm p-6" data-purpose="official-identifiers-grid">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-100 gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-slate-100 text-[#004d6c] flex items-center justify-center">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div>
+<h2 class="text-base font-bold text-slate-900">National Medical Commission &amp; ABDM Licensure</h2>
+<p class="text-xs text-slate-500">Cryptographically bound to National Doctors Registry (NPR/NDR) via DGHS portal</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-md border border-emerald-200 self-start sm:self-auto">
+<svg class="w-3.5 h-3.5 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+                VERIFIED • NMC ACTIVE
+              </span>
+</div>
+<!-- Identifiers 2x2 + Node Deployment Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
+<!-- 1. National Medical Commission (NMC) License -->
+<div class="bg-slate-50 border border-slate-200/80 rounded-xl p-4 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-xs text-slate-500 mb-1">
+<span class="">National Medical Commission (NMC) License</span>
+<svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="text-base font-bold text-slate-900 tracking-tight">MD-44912-TN</div>
+</div>
+<div class="mt-3 pt-2 border-t border-slate-200/60 flex items-center justify-between text-[11px] text-slate-500">
+<span class="">Issued: 14 Aug 2014</span>
+<span class="text-emerald-700 font-semibold">Valid through 2034</span>
+</div>
+</div>
+<!-- 2. State Medical Council ID -->
+<div class="bg-slate-50 border border-slate-200/80 rounded-xl p-4 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-xs text-slate-500 mb-1">
+<span class="">State Medical Council ID</span>
+<svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="text-base font-bold text-slate-900 tracking-tight">TN-MC-2014-88392</div>
+</div>
+<div class="mt-3 pt-2 border-t border-slate-200/60 flex items-center justify-between text-[11px] text-slate-500">
+<span class="">Tamil Nadu Medical Council</span>
+<span class="text-slate-600 font-medium">Permanent Registration</span>
+</div>
+</div>
+<!-- 3. ABDM Clinician Registry ID (HPPR) -->
+<div class="bg-slate-50 border border-slate-200/80 rounded-xl p-4 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-xs text-slate-500 mb-1">
+<span class="">ABDM Clinician Registry ID (HPR)</span>
+<svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="text-base font-bold text-slate-900 tracking-tight">DOC-9082-IND</div>
+</div>
+<div class="mt-3 pt-2 border-t border-slate-200/60 flex items-center justify-between text-[11px] text-slate-500">
+<span class="">ABDM Milestone M3 Certified</span>
+<span class="text-emerald-700 font-semibold">HPPR Level-3 Verified</span>
+</div>
+</div>
+<!-- 4. Prescriber Privileges Tier -->
+<div class="bg-slate-50 border border-slate-200/80 rounded-xl p-4 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-xs text-slate-500 mb-1">
+<span class="">Prescriber Privileges</span>
+<svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="text-base font-bold text-slate-900 tracking-tight">Tier-1 Authorized (Schedule-H &amp; Overrides)</div>
+</div>
+<div class="mt-3 pt-2 border-t border-slate-200/60 flex items-center justify-between text-[11px] text-slate-500">
+<span class="">Narcotics &amp; Schedule X</span>
+<span class="text-emerald-700 font-semibold">Trauma Override Enabled</span>
+</div>
+</div>
+<!-- 5. Institutional Node Deployment (Full Span) -->
+<div class="md:col-span-2 bg-slate-50 border border-slate-200/80 rounded-xl p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-[#004d6c]">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div>
+<span class="text-xs text-slate-500 block">Institutional Node Deployment</span>
+<span class="text-sm font-bold text-slate-900">Apollo Main Greams Road • Node 09 Cluster (Trauma Bay 3)</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-xs text-slate-500 hidden sm:inline">DSC Class 3 Valid</span>
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Mandatory Warning / Nodal liaison notice -->
+<div class="mt-4 p-3.5 bg-sky-50 border border-sky-100 rounded-xl flex items-start gap-3 text-xs text-sky-900">
+<svg class="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<div class="flex-1 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<p class="">
+                  Contact your hospital nodal admin or ABDM registrar to update verified clinical credentials or modify Schedule-H prescribing caps.
+                </p>
+<button class="whitespace-nowrap font-semibold text-[#004d6c] hover:text-[#05192d] underline decoration-slate-300 underline-offset-2" type="button">
+                  Contact Nodal Admin →
+                </button>
+</div>
+</div>
+</section>
+<!-- SECTION: Verifiable Credential QR & Digital Certificate Card -->
+
+<!-- SECTION: Audit Log & Institutional Key Sign-offs -->
+
+</main>
+<!-- END: RightMainCredentialsPanel -->
+</div>
+</div>
+<!-- END: SettingsInnerBody -->
+</div>
+<!-- END: MainContentShell -->
+
+
+<div id="snapdom-sandbox" data-snapdom-sandbox="true" aria-hidden="true" style="position: absolute; left: -9999px; top: -9999px; width: 0px; height: 0px; overflow: hidden;"></div>
+
+</body></html>

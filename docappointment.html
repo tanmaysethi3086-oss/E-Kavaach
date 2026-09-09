@@ -1,0 +1,647 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #F7F9FD;
+        font-family: 'Inter', sans-serif;
+      }
+    }
+    .font-space {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            navy: "#0B1F3A",
+            lavender: "#E4E4FB",
+            "lavender-text": "#3730A3",
+            teal: {
+              brand: "#00A896",
+              light: "#E6FFFA",
+              dark: "#028090",
+              accent: "#02C39A"
+            },
+            amber: {
+              subtle: "#FEF3C7",
+              deep: "#D97706"
+            },
+            danger: "#DC2626"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#F7F9FD] text-[#0B1F3A] antialiased selection:bg-teal-100 selection:text-teal-900">
+<!-- 1. Left Fixed Sidebar (~260px wide) -->
+<aside class="fixed left-0 top-0 h-full w-[268px] bg-white border-r border-[#E0E3E6] z-50 flex flex-col justify-between overflow-hidden shadow-sm">
+<div class="flex flex-col flex-1 overflow-y-auto px-5 pt-5 pb-3">
+<!-- Brand Top -->
+<div class="flex items-center gap-3 pb-5 mb-5 border-b border-[#E0E3E6]">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0B1F3A] via-[#028090] to-[#00A896] flex items-center justify-center shadow-sm">
+<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M12 8v4m0 4h.01" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="font-space font-bold text-[20px] text-[#0B1F3A] tracking-tight leading-tight">E-KAVACH</span>
+<span class="text-[10px] font-semibold text-slate-400 tracking-wider uppercase font-space">TRAUMA OS V4.2</span>
+</div>
+</div>
+<!-- Doctor Profile Mini-Card -->
+<div class="bg-[#F8FAFC] border border-[#E0E3E6] rounded-[14px] p-3.5 mb-5 flex flex-col gap-2.5">
+<div class="flex items-center gap-3">
+<div class="relative w-11 h-11 rounded-full bg-[#0B1F3A] text-white flex items-center justify-center font-space font-bold text-sm shrink-0">
+            KM
+            <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-[#10B981] border-2 border-white"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-sm font-bold text-[#0B1F3A] truncate leading-tight">Dr. Kavitha Menon</span>
+<span class="text-xs text-slate-500 truncate mt-0.5">Chief Interventional Cardio</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1.5 border-t border-[#E0E3E6]/80 text-xs">
+<span class="text-slate-600 font-medium truncate">Apollo Greams Trauma</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#E4E4FB] text-[#3730A3] text-[10px] font-semibold shrink-0">
+            NMC: MD-44912-TN
+          </span>
+</div>
+</div>
+<!-- Navigation List -->
+<nav class="flex flex-col gap-1.5"><!-- Dashboard -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 text-slate-600 hover:text-[#0B1F3A] hover:bg-slate-100 rounded-[14px] font-medium text-sm transition-colors" href="#">
+<svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Dashboard</span>
+</a>
+<!-- Scan Patient QR -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 text-slate-600 hover:text-[#0B1F3A] hover:bg-slate-100 rounded-[14px] font-medium text-sm transition-colors" href="pattient_scan.html">
+<svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Scan Patient QR</span>
+</a>
+<!-- My Doctor ID -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 text-slate-600 hover:text-[#0B1F3A] hover:bg-slate-100 rounded-[14px] font-medium text-sm transition-colors" href="#">
+<svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>My Doctor ID</span>
+</a>
+<!-- Appointments (Active) -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 bg-[#0B1F3A] text-white rounded-[14px] font-medium text-sm shadow-sm transition-all" href="#">
+<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Appointments</span>
+</a>
+<!-- Patients -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 text-slate-600 hover:text-[#0B1F3A] hover:bg-slate-100 rounded-[14px] font-medium text-sm transition-colors" href="#">
+<svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Patients</span>
+</a>
+<!-- Doctor Network -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 text-slate-600 hover:text-[#0B1F3A] hover:bg-slate-100 rounded-[14px] font-medium text-sm transition-colors" href="#">
+<svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Doctor Network</span>
+</a>
+<!-- Messages / Consults -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 text-slate-600 hover:text-[#0B1F3A] hover:bg-slate-100 rounded-[14px] font-medium text-sm transition-colors" href="#">
+<svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Messages / Consults</span>
+</a>
+<!-- Settings -->
+<a class="flex items-center gap-3 px-3.5 py-2.5 text-slate-600 hover:text-[#0B1F3A] hover:bg-slate-100 rounded-[14px] font-medium text-sm transition-colors" href="#">
+<svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Settings</span>
+</a></nav>
+</div>
+<!-- Bottom Telemetry Card -->
+<div class="p-4 border-t border-[#E0E3E6] bg-white">
+<div class="bg-[#F8FAFC] border border-[#E0E3E6] rounded-[14px] p-3 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00A896] opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-[#00A896]"></span>
+</span>
+<span class="text-[11px] font-bold text-[#0B1F3A] uppercase tracking-wider font-space">Node Active</span>
+</div>
+<span class="text-[10px] font-mono text-slate-400">Node 09</span>
+</div>
+<p class="text-xs text-slate-600 font-medium leading-snug">
+          Apollo Trauma Node 09: Connected • <span class="text-[#028090] font-mono font-semibold">0.12s ping</span> • 99.98% sync
+        </p>
+</div>
+</div>
+</aside>
+<!-- Content Wrapper -->
+<div class="pl-[268px] flex flex-col min-h-screen">
+<!-- 2. Sticky Top Bar -->
+<header class="sticky top-0 h-16 bg-white border-b border-[#E0E3E6] z-40 px-8 flex items-center justify-between">
+<!-- Search -->
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-[18px]">search</span>
+<input class="w-full h-10 pl-10 pr-4 rounded-[14px] bg-[#F7F9FD] border border-[#E0E3E6] text-sm text-[#0B1F3A] placeholder:text-slate-400 focus:outline-none focus:border-[#0B1F3A] transition-all" placeholder="Search patient by ABHA, phone, or name..." type="search">
+</div>
+<!-- Right Cluster -->
+<div class="flex items-center gap-3">
+<!-- Lavender status pill -->
+<span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4E4FB] text-[#0B1F3A] font-semibold text-xs tracking-wide">
+<span class="w-2 h-2 rounded-full bg-[#0B1F3A] animate-pulse"></span>
+          Live Trauma Bay Active
+        </span>
+<!-- Red Emergency Button (Strictly Red) -->
+<button class="inline-flex items-center gap-1.5 h-10 px-4 rounded-[14px] bg-[#0B1F3A] hover:bg-[#132a4e] text-white text-xs font-semibold tracking-wide shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>New Slot</span>
+</button>
+<!-- Notification -->
+<button class="w-10 h-10 rounded-[14px] flex items-center justify-center text-slate-600 hover:bg-slate-100 border border-[#E0E3E6] transition-colors" type="button">
+<span class="material-symbols-outlined text-[19px]">notifications</span>
+</button>
+<!-- Help -->
+<button class="w-10 h-10 rounded-[14px] flex items-center justify-center text-slate-600 hover:bg-slate-100 border border-[#E0E3E6] transition-colors" type="button">
+<span class="material-symbols-outlined text-[19px]">help</span>
+</button>
+<!-- Circular Doctor Avatar -->
+<div class="w-10 h-10 rounded-full bg-[#0B1F3A] text-white flex items-center justify-center font-space font-bold text-sm ml-1">
+          KM
+        </div>
+</div>
+</header>
+<!-- Main Container -->
+<main class="p-8 flex-1 flex flex-col gap-6 max-w-[1600px] w-full mx-auto"><!-- Page Header Section -->
+<section class="bg-white border border-[#E0E3E6] rounded-[14px] p-6 shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-5">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2 mb-0.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#E4E4FB] text-[#0B1F3A] text-[11px] font-bold tracking-wider font-space uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-[#0B1F3A] animate-pulse"></span>
+        CLINICIAN DESK
+      </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#E6FFFA] border border-[#02C39A]/30 text-[#028090] text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[12px]">calendar_month</span>
+        Bay 3 Interventional Unit
+      </span>
+</div>
+<h1 class="font-space text-2xl lg:text-[32px] font-bold text-[#0B1F3A] tracking-tight leading-tight">
+      Appointment Approvals
+    </h1>
+<p class="text-sm text-slate-500 font-normal">
+      Review and manage incoming appointment requests.
+    </p>
+</div>
+<div class="flex items-center gap-3 shrink-0 flex-wrap">
+<!-- Amber Pending Pill -->
+<div class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-[#FEF3C7] text-[#D97706] border border-[#D97706]/20 font-semibold text-xs tracking-wide shadow-sm">
+<span class="w-2 h-2 rounded-full bg-[#D97706] animate-pulse"></span>
+<span>5 Pending Approval</span>
+</div>
+<button class="inline-flex items-center gap-2 h-10 px-4 rounded-[14px] bg-white border border-[#E0E3E6] text-[#0B1F3A] hover:bg-slate-50 font-semibold text-xs tracking-wide transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[17px] text-slate-500">filter_list</span>
+      Filter by Specialty
+    </button>
+<button class="inline-flex items-center gap-2 h-10 px-4 rounded-[14px] bg-[#0B1F3A] hover:bg-[#132a4e] text-white font-semibold text-xs tracking-wide transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+      Shift Schedule: Today
+    </button>
+</div>
+</section>
+<!-- Quick KPI Metric Summary Strip -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-5">
+<div class="bg-white border border-[#E0E3E6] rounded-[14px] p-5 shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider font-space">AWAITING CLINICIAN REVIEW</span>
+<span class="font-space text-[28px] font-bold text-[#D97706] mt-1 leading-tight">5 <span class="text-sm font-semibold text-slate-600">Pending</span></span>
+<span class="text-xs text-slate-500 mt-1">2 high acuity priority requests</span>
+</div>
+<div class="w-12 h-12 rounded-[14px] bg-[#FEF3C7] flex items-center justify-center text-[#D97706]">
+<span class="material-symbols-outlined text-[24px]">pending_actions</span>
+</div>
+</div>
+<div class="bg-white border border-[#E0E3E6] rounded-[14px] p-5 shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider font-space">CONFIRMED SESSIONS TODAY</span>
+<span class="font-space text-[28px] font-bold text-[#0B1F3A] mt-1 leading-tight">12 <span class="text-sm font-semibold text-slate-600">Confirmed</span></span>
+<span class="text-xs text-slate-500 mt-1">Next session at 03:00 PM</span>
+</div>
+<div class="w-12 h-12 rounded-[14px] bg-[#E6FFFA] flex items-center justify-center text-[#00A896]">
+<span class="material-symbols-outlined text-[24px]">check_circle</span>
+</div>
+</div>
+<div class="bg-white border border-[#E0E3E6] rounded-[14px] p-5 shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider font-space">VIRTUAL CONSULTATIONS</span>
+<span class="font-space text-[28px] font-bold text-[#0B1F3A] mt-1 leading-tight">3 <span class="text-sm font-semibold text-slate-600">Teleconsults</span></span>
+<span class="text-xs text-slate-500 mt-1">Encrypted ABHA tele-link active</span>
+</div>
+<div class="w-12 h-12 rounded-[14px] bg-[#E4E4FB] flex items-center justify-center text-[#3730A3]">
+<span class="material-symbols-outlined text-[24px]">videocam</span>
+</div>
+</div>
+</section>
+<!-- 4. Pending Appointments Module (Main Focus, Top) -->
+<section class="bg-white border border-[#E0E3E6] rounded-[14px] shadow-sm overflow-hidden">
+<div class="p-6 border-b border-slate-100 flex items-center justify-between flex-wrap gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-[12px] bg-[#FEF3C7] text-[#D97706] flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">assignment_late</span>
+</div>
+<div>
+<div class="flex items-center gap-2.5">
+<h2 class="font-space text-lg font-bold text-[#0B1F3A]">Pending Appointments</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-[#FEF3C7] text-[#D97706] border border-[#D97706]/20 text-[11px] font-bold font-space">
+            5 Requests
+          </span>
+</div>
+<p class="text-xs text-slate-500 mt-0.5">Review clinical priority, triage notes, and approve or propose alternative slots</p>
+</div>
+</div>
+<span class="text-xs text-slate-400 font-mono">Average Approval Turnaround: 8.4 mins</span>
+</div>
+<!-- Clean Rows List -->
+<div class="flex flex-col divide-y divide-slate-100">
+<!-- Row 1: Anand R. Patel -->
+<div class="p-5 hover:bg-[#F8FAFC] transition-colors flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-full bg-[#0B1F3A] text-white flex items-center justify-center font-space font-bold text-sm shrink-0 mt-0.5">
+          RP
+        </div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2.5 flex-wrap">
+<span class="font-space font-bold text-base text-[#0B1F3A]">Anand R. Patel</span>
+<span class="text-xs font-medium text-slate-500">• 54y / M</span>
+<span class="px-2.5 py-0.5 rounded-full bg-[#E4E4FB] text-[#3730A3] text-[10px] font-bold font-space uppercase">High Acuity</span>
+<span class="px-2.5 py-0.5 rounded-full bg-[#FEF3C7] text-[#D97706] border border-[#D97706]/20 text-[10px] font-semibold">Action Required</span>
+</div>
+<p class="text-xs text-slate-500 font-normal">
+            Tomorrow, 25 Oct 2026 • <strong class="text-slate-700 font-medium">10:30 AM</strong> (In-person, Bay 3 Cath Lab)
+          </p>
+<div class="flex items-center gap-2 mt-0.5 text-xs text-slate-600">
+<span class="material-symbols-outlined text-[15px] text-slate-400">notes</span>
+<span>Reason: <strong class="text-slate-700 font-medium">Follow-up: Post-cardiac consult &amp; stent evaluation</strong></span>
+<span class="text-slate-300">•</span>
+<span class="text-slate-500 font-mono text-[11px]">ABHA: 9812-4410-TN</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2.5 shrink-0 pt-2 lg:pt-0">
+<button class="h-9 px-4 rounded-[10px] border border-slate-300 bg-white hover:bg-slate-50 text-[#0B1F3A] font-semibold text-xs transition-colors shadow-sm" type="button">
+          Reschedule / Decline
+        </button>
+<button class="h-9 px-5 rounded-[10px] bg-[#00A896] hover:bg-[#028090] text-white font-semibold text-xs tracking-wide transition-colors shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+          Approve
+        </button>
+</div>
+</div>
+<!-- Row 2: Meenakshi Sundaram -->
+<div class="p-5 hover:bg-[#F8FAFC] transition-colors flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-full bg-[#028090] text-white flex items-center justify-center font-space font-bold text-sm shrink-0 mt-0.5">
+          MS
+        </div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2.5 flex-wrap">
+<span class="font-space font-bold text-base text-[#0B1F3A]">Meenakshi Sundaram</span>
+<span class="text-xs font-medium text-slate-500">• 42y / F</span>
+<span class="px-2.5 py-0.5 rounded-full bg-[#FEF3C7] text-[#D97706] border border-[#D97706]/20 text-[10px] font-semibold">Action Required</span>
+</div>
+<p class="text-xs text-slate-500 font-normal">
+            Tomorrow, 25 Oct 2026 • <strong class="text-slate-700 font-medium">02:15 PM</strong> (Cardiac Diagnostic Lab)
+          </p>
+<div class="flex items-center gap-2 mt-0.5 text-xs text-slate-600">
+<span class="material-symbols-outlined text-[15px] text-slate-400">notes</span>
+<span>Reason: <strong class="text-slate-700 font-medium">Palpitations &amp; Exercise ECG Treadmill Review</strong></span>
+<span class="text-slate-300">•</span>
+<span class="text-slate-500 font-mono text-[11px]">ABHA: 9845-6612-TN</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2.5 shrink-0 pt-2 lg:pt-0">
+<button class="h-9 px-4 rounded-[10px] border border-slate-300 bg-white hover:bg-slate-50 text-[#0B1F3A] font-semibold text-xs transition-colors shadow-sm" type="button">
+          Reschedule / Decline
+        </button>
+<button class="h-9 px-5 rounded-[10px] bg-[#00A896] hover:bg-[#028090] text-white font-semibold text-xs tracking-wide transition-colors shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+          Approve
+        </button>
+</div>
+</div>
+<!-- Row 3: Vikramaditya Sen -->
+<div class="p-5 hover:bg-[#F8FAFC] transition-colors flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-full bg-slate-700 text-white flex items-center justify-center font-space font-bold text-sm shrink-0 mt-0.5">
+          VS
+        </div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2.5 flex-wrap">
+<span class="font-space font-bold text-base text-[#0B1F3A]">Vikramaditya Sen</span>
+<span class="text-xs font-medium text-slate-500">• 61y / M</span>
+<span class="px-2.5 py-0.5 rounded-full bg-[#E4E4FB] text-[#3730A3] text-[10px] font-semibold">Standard Review</span>
+<span class="px-2 py-0.5 rounded-full bg-[#E6FFFA] text-[#028090] text-[10px] font-semibold">Teleconsult</span>
+</div>
+<p class="text-xs text-slate-500 font-normal">
+            Monday, 27 Oct 2026 • <strong class="text-slate-700 font-medium">11:00 AM</strong> (Teleconsult / Video)
+          </p>
+<div class="flex items-center gap-2 mt-0.5 text-xs text-slate-600">
+<span class="material-symbols-outlined text-[15px] text-slate-400">notes</span>
+<span>Reason: <strong class="text-slate-700 font-medium">Hypertension Med Adjustment &amp; Ambulatory BP Review</strong></span>
+<span class="text-slate-300">•</span>
+<span class="text-slate-500 font-mono text-[11px]">ABHA: 9112-5509-WB</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2.5 shrink-0 pt-2 lg:pt-0">
+<button class="h-9 px-4 rounded-[10px] border border-slate-300 bg-white hover:bg-slate-50 text-[#0B1F3A] font-semibold text-xs transition-colors shadow-sm" type="button">
+          Reschedule / Decline
+        </button>
+<button class="h-9 px-5 rounded-[10px] bg-[#00A896] hover:bg-[#028090] text-white font-semibold text-xs tracking-wide transition-colors shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+          Approve
+        </button>
+</div>
+</div>
+<!-- Row 4: Devi Radhakrishnan -->
+<div class="p-5 hover:bg-[#F8FAFC] transition-colors flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-full bg-[#0B1F3A] text-white flex items-center justify-center font-space font-bold text-sm shrink-0 mt-0.5">
+          DR
+        </div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2.5 flex-wrap">
+<span class="font-space font-bold text-base text-[#0B1F3A]">Devi Radhakrishnan</span>
+<span class="text-xs font-medium text-slate-500">• 38y / F</span>
+<span class="px-2.5 py-0.5 rounded-full bg-[#E4E4FB] text-[#3730A3] text-[10px] font-semibold">Cardio OPD</span>
+</div>
+<p class="text-xs text-slate-500 font-normal">
+            Tuesday, 28 Oct 2026 • <strong class="text-slate-700 font-medium">09:45 AM</strong> (OPD Consultation)
+          </p>
+<div class="flex items-center gap-2 mt-0.5 text-xs text-slate-600">
+<span class="material-symbols-outlined text-[15px] text-slate-400">notes</span>
+<span>Reason: <strong class="text-slate-700 font-medium">Post-thrombolytic symptom checkup &amp; lipid profile sync</strong></span>
+<span class="text-slate-300">•</span>
+<span class="text-slate-500 font-mono text-[11px]">ABHA: 9341-8902-KL</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2.5 shrink-0 pt-2 lg:pt-0">
+<button class="h-9 px-4 rounded-[10px] border border-slate-300 bg-white hover:bg-slate-50 text-[#0B1F3A] font-semibold text-xs transition-colors shadow-sm" type="button">
+          Reschedule / Decline
+        </button>
+<button class="h-9 px-5 rounded-[10px] bg-[#00A896] hover:bg-[#028090] text-white font-semibold text-xs tracking-wide transition-colors shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+          Approve
+        </button>
+</div>
+</div>
+<!-- Row 5: Karan J. Sharma -->
+<div class="p-5 hover:bg-[#F8FAFC] transition-colors flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-full bg-slate-600 text-white flex items-center justify-center font-space font-bold text-sm shrink-0 mt-0.5">
+          KJ
+        </div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2.5 flex-wrap">
+<span class="font-space font-bold text-base text-[#0B1F3A]">Karan J. Sharma</span>
+<span class="text-xs font-medium text-slate-500">• 49y / M</span>
+<span class="px-2.5 py-0.5 rounded-full bg-[#E6FFFA] text-[#028090] text-[10px] font-semibold">Imaging / Echo</span>
+</div>
+<p class="text-xs text-slate-500 font-normal">
+            Wednesday, 29 Oct 2026 • <strong class="text-slate-700 font-medium">04:30 PM</strong> (Echocardiogram Review)
+          </p>
+<div class="flex items-center gap-2 mt-0.5 text-xs text-slate-600">
+<span class="material-symbols-outlined text-[15px] text-slate-400">notes</span>
+<span>Reason: <strong class="text-slate-700 font-medium">Second opinion on aortic valve clearance</strong></span>
+<span class="text-slate-300">•</span>
+<span class="text-slate-500 font-mono text-[11px]">ABHA: 9021-3489-DL</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2.5 shrink-0 pt-2 lg:pt-0">
+<button class="h-9 px-4 rounded-[10px] border border-slate-300 bg-white hover:bg-slate-50 text-[#0B1F3A] font-semibold text-xs transition-colors shadow-sm" type="button">
+          Reschedule / Decline
+        </button>
+<button class="h-9 px-5 rounded-[10px] bg-[#00A896] hover:bg-[#028090] text-white font-semibold text-xs tracking-wide transition-colors shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+          Approve
+        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Upcoming Approved Appointments (Below, Secondary) -->
+<section class="bg-white border border-[#E0E3E6] rounded-[14px] shadow-sm overflow-hidden flex flex-col">
+<div class="p-6 border-b border-slate-100 flex items-center justify-between flex-wrap gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-[12px] bg-[#E6FFFA] text-[#00A896] flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">event_available</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-space text-lg font-bold text-[#0B1F3A]">Upcoming Approved Appointments</h2>
+<span class="text-xs font-medium text-slate-500">(8 scheduled today &amp; tomorrow)</span>
+</div>
+<p class="text-xs text-slate-500 mt-0.5">Confirmed consultations verified through ABDM registry</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-8 px-3 rounded-[10px] bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[15px]">calendar_today</span>
+        Open Calendar View
+      </button>
+</div>
+</div>
+<!-- Table-style List -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-slate-100 bg-[#F8FAFC] text-[11px] font-semibold text-slate-400 uppercase tracking-wider font-space">
+<th class="py-3.5 px-6">Patient Name</th>
+<th class="py-3.5 px-6">Date &amp; Time</th>
+<th class="py-3.5 px-6">Location / Unit</th>
+<th class="py-3.5 px-6">Primary Clinician</th>
+<th class="py-3.5 px-6">Status</th>
+<th class="py-3.5 px-6 text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 text-xs text-slate-700 font-medium">
+<!-- Row 1 -->
+<tr class="hover:bg-[#F7F9FD] transition-colors">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 text-[#0B1F3A] flex items-center justify-center font-space font-bold text-xs">
+                RS
+              </div>
+<div>
+<span class="font-bold text-[#0B1F3A] block">Rajesh V. Sharma</span>
+<span class="text-[11px] text-slate-400 font-mono">ABHA: 9824-8819-TN</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-slate-600">
+<span class="font-semibold text-slate-800">Today, 24 Oct 2026</span><br>
+<span class="text-[11px] text-slate-500">03:00 PM (IST)</span>
+</td>
+<td class="py-4 px-6 text-slate-600">
+<span>Bay 3 Room 4</span><br>
+<span class="text-[11px] text-slate-400">In-person consult</span>
+</td>
+<td class="py-4 px-6">
+<span class="text-[#0B1F3A] font-semibold">Dr. Kavitha Menon</span>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#E6FFFA] text-[#00A896] border border-[#02C39A]/30 text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#00A896]"></span>
+              Approved
+            </span>
+</td>
+<td class="py-4 px-6 text-right">
+<a class="text-xs font-semibold text-[#00A896] hover:underline" href="#">
+              View Chart →
+            </a>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-[#F7F9FD] transition-colors">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-[#E4E4FB] text-[#3730A3] flex items-center justify-center font-space font-bold text-xs">
+                LN
+              </div>
+<div>
+<span class="font-bold text-[#0B1F3A] block">Smt. Lakshmi Narayanan</span>
+<span class="text-[11px] text-slate-400 font-mono">ABHA: 8901-4471-TN</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-slate-600">
+<span class="font-semibold text-slate-800">Today, 24 Oct 2026</span><br>
+<span class="text-[11px] text-slate-500">04:30 PM (IST)</span>
+</td>
+<td class="py-4 px-6 text-slate-600">
+<span>Pacemaker Telemetry Check</span><br>
+<span class="text-[11px] text-slate-400">Bay 3 Room 2</span>
+</td>
+<td class="py-4 px-6">
+<span class="text-[#0B1F3A] font-semibold">Dr. Kavitha Menon</span>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#E6FFFA] text-[#00A896] border border-[#02C39A]/30 text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#00A896]"></span>
+              Approved
+            </span>
+</td>
+<td class="py-4 px-6 text-right">
+<a class="text-xs font-semibold text-[#00A896] hover:underline" href="#">
+              View Chart →
+            </a>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-[#F7F9FD] transition-colors">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 text-[#0B1F3A] flex items-center justify-center font-space font-bold text-xs">
+                HV
+              </div>
+<div>
+<span class="font-bold text-[#0B1F3A] block">Harish K. Varma</span>
+<span class="text-[11px] text-slate-400 font-mono">ABHA: 7810-9011-AP</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-slate-600">
+<span class="font-semibold text-slate-800">Tomorrow, 25 Oct 2026</span><br>
+<span class="text-[11px] text-slate-500">09:15 AM (IST)</span>
+</td>
+<td class="py-4 px-6 text-slate-600">
+<span>Pre-Op Cardiac Clearance</span><br>
+<span class="text-[11px] text-slate-400">Cath Prep 1</span>
+</td>
+<td class="py-4 px-6">
+<span class="text-[#0B1F3A] font-semibold">Dr. Kavitha Menon</span>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#E6FFFA] text-[#00A896] border border-[#02C39A]/30 text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#00A896]"></span>
+              Approved
+            </span>
+</td>
+<td class="py-4 px-6 text-right">
+<a class="text-xs font-semibold text-[#00A896] hover:underline" href="#">
+              View Chart →
+            </a>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-[#F7F9FD] transition-colors">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-[#E6FFFA] text-[#028090] flex items-center justify-center font-space font-bold text-xs">
+                SM
+              </div>
+<div>
+<span class="font-bold text-[#0B1F3A] block">Shalini Mohan</span>
+<span class="text-[11px] text-slate-400 font-mono">ABHA: 9912-7801-TN</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 text-slate-600">
+<span class="font-semibold text-slate-800">Tomorrow, 25 Oct 2026</span><br>
+<span class="text-[11px] text-slate-500">11:45 AM (IST)</span>
+</td>
+<td class="py-4 px-6 text-slate-600">
+<span>Stress Echocardiogram</span><br>
+<span class="text-[11px] text-slate-400">Lab 2</span>
+</td>
+<td class="py-4 px-6">
+<span class="text-[#0B1F3A] font-semibold">Dr. Kavitha Menon</span>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#E6FFFA] text-[#00A896] border border-[#02C39A]/30 text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#00A896]"></span>
+              Approved
+            </span>
+</td>
+<td class="py-4 px-6 text-right">
+<a class="text-xs font-semibold text-[#00A896] hover:underline" href="#">
+              View Chart →
+            </a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section></main>
+</div>
+</body></html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-KAVACH — Hospital ER Access</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Space Grotesk & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#004d6c',
+              'navy-dark': '#00334a',
+              teal: '#00A896',
+              'teal-bright': '#02C39A',
+              lavender: '#E4E4FB',
+              'lavender-text': '#494576',
+              surface: '#F8FAFC',
+              border: '#E2E8F0',
+              danger: '#BA1A1A',
+              'danger-tint': '#FFF1F1',
+              'danger-border': '#FECACA'
+            }
+          },
+          fontFamily: {
+            headline: ['Space Grotesk', 'sans-serif'],
+            sans: ['Inter', 'sans-serif']
+          },
+          boxShadow: {
+            'card': '0 4px 20px -2px rgba(0, 77, 108, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03)',
+            'focal': '0 12px 32px -4px rgba(186, 26, 26, 0.07), 0 4px 16px -2px rgba(0, 77, 108, 0.04)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F8FAFC;
+    }
+    .font-headline {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+  </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen flex flex-col md:flex-row">
+
+  <!-- ================= LEFT SIDEBAR (PATIENT DASHBOARD CONTINUITY) ================= -->
+  <aside class="w-full md:w-72 bg-white border-r border-slate-200 flex-shrink-0 flex flex-col justify-between p-5 min-h-screen">
+    <div class="space-y-6">
+      <!-- Portal Brand Logo -->
+      <div class="flex items-center gap-3 px-2 py-1">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk7ZDDdz0oZM7lA9Vl5syXQCeszs6_qB5-Fp21rZv9FE2lapchE6P5HQsckuhsmGiIWaSip_crsHiwuUaQo0fY8SEDkh5AxHu1IthAvFlMws1tjggu3JOAZio4RyjdwTh7h-Rd49yp_BPpf87MeBd-Xi0ZDKP4u97CkN-y5XxBWV6xTFwzcBmo8UtSMp81WsDSeTxDfTolsda7to7BOvs9jcrJjmRdk_mTUFvCuU09GOeguiEthDdkNG84HEeIvZzUzSg" alt="E-KAVACH Logo" class="w-9 h-9 object-contain rounded-lg">
+        <div>
+          <div class="font-headline font-bold text-lg text-brand-navy tracking-tight leading-none">E-KAVACH</div>
+          <span class="text-[10px] font-semibold tracking-wider uppercase text-teal-600 block mt-0.5">National Health Portal</span>
+        </div>
+      </div>
+
+      <!-- Patient Profile Pill -->
+      <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-4 flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-brand-navy text-white font-headline font-semibold flex items-center justify-center text-sm ring-2 ring-brand-teal/20">
+          RS
+        </div>
+        <div class="min-w-0 flex-1">
+          <div class="flex items-center gap-1.5">
+            <span class="font-semibold text-sm text-slate-900 truncate">Rajesh V. Sharma</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="badge-check" aria-hidden="true" class="lucide lucide-badge-check w-4 h-4 text-teal-600 flex-shrink-0"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><path d="m16 9-5.5 5.5L8 12"></path></svg>
+          </div>
+          <p class="text-xs text-slate-500 truncate font-mono">ABHA-9824-8819-TN</p>
+          <div class="flex items-center gap-2 mt-1">
+            <span class="inline-flex items-center gap-1 text-[10px] font-medium text-teal-700 bg-teal-50 px-1.5 py-0.5 rounded-full border border-teal-200">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse"></span>
+              Verified Health ID
+            </span>
+            <span class="text-[10px] text-slate-400 font-medium">Tier-1 Citizen</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="space-y-1.5 text-sm font-medium">
+        <a href="#" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-600 hover:text-brand-navy hover:bg-slate-50 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="layout-grid" aria-hidden="true" class="lucide lucide-layout-grid w-4 h-4 text-slate-400"><rect width="7" height="7" x="3" y="3" rx="1"></rect><rect width="7" height="7" x="14" y="3" rx="1"></rect><rect width="7" height="7" x="14" y="14" rx="1"></rect><rect width="7" height="7" x="3" y="14" rx="1"></rect></svg>
+          <span class="">Dashboard / Home</span>
+        </a>
+        <a href="#" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-600 hover:text-brand-navy hover:bg-slate-50 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="credit-card" aria-hidden="true" class="lucide lucide-credit-card w-4 h-4 text-slate-400"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+          <span class="">My Health ID</span>
+        </a>
+        <a href="#" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-600 hover:text-brand-navy hover:bg-slate-50 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calendar" aria-hidden="true" class="lucide lucide-calendar w-4 h-4 text-slate-400"><path d="M8 2v3"></path><path d="M16 2v3"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path></svg>
+          <span class="">Appointments</span>
+        </a>
+        <!-- ACTIVE ITEM: Hospital ER Access -->
+        <a href="#" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-brand-navy text-white shadow-sm font-semibold">
+          <div class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="ambulance" aria-hidden="true" class="lucide lucide-ambulance w-4 h-4 text-teal-300"><path d="M10 10H6"></path><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.28a1 1 0 0 0-.684-.948l-1.923-.641a1 1 0 0 1-.578-.502l-1.539-3.076A1 1 0 0 0 16.382 8H14"></path><path d="M8 8v4"></path><path d="M9 18h6"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg>
+            <span class="">Hospital ER Access</span>
+          </div>
+          <span class="w-2 h-2 rounded-full bg-red-400 animate-pulse"></span>
+        </a>
+        <a href="#" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-600 hover:text-brand-navy hover:bg-slate-50 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="file-text" aria-hidden="true" class="lucide lucide-file-text w-4 h-4 text-slate-400"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+          <span class="">Prescriptions &amp; History</span>
+        </a>
+        <a href="#" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-600 hover:text-brand-navy hover:bg-slate-50 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="landmark" aria-hidden="true" class="lucide lucide-landmark w-4 h-4 text-slate-400"><path d="M10 18v-7"></path><path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z"></path><path d="M14 18v-7"></path><path d="M18 18v-7"></path><path d="M3 22h18"></path><path d="M6 18v-7"></path></svg>
+          <span class="">Government Schemes</span>
+        </a>
+        <a href="#" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-600 hover:text-brand-navy hover:bg-slate-50 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-square" aria-hidden="true" class="lucide lucide-message-square w-4 h-4 text-slate-400"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg>
+          <span class="">Messages / Consults</span>
+        </a>
+        <a href="#" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-600 hover:text-brand-navy hover:bg-slate-50 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bot" aria-hidden="true" class="lucide lucide-bot w-4 h-4 text-slate-400"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg>
+          <span class="">AI Assistant</span>
+        </a>
+        <a href="#" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-slate-600 hover:text-brand-navy hover:bg-slate-50 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="settings" aria-hidden="true" class="lucide lucide-settings w-4 h-4 text-slate-400"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          <span class="">Settings</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Bottom Emergency SOS Trigger -->
+    <div class="pt-6">
+      <button class="w-full py-3 px-4 rounded-xl bg-brand-danger text-white font-medium flex items-center justify-center gap-2.5 shadow-sm hover:bg-red-700 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="siren" aria-hidden="true" class="lucide lucide-siren w-4 h-4"><path d="M7 18v-6a5 5 0 1 1 10 0v6"></path><path d="M5 21a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z"></path><path d="M21 12h1"></path><path d="M18.5 4.5 18 5"></path><path d="M2 12h1"></path><path d="M12 2v1"></path><path d="m4.929 4.929.707.707"></path><path d="M12 12v6"></path></svg>
+        <span class="">EMERGENCY SOS</span>
+      </button>
+      <div class="mt-3 flex items-center justify-between text-[11px] text-slate-400 px-1 font-mono">
+        <span class="">Node: Apollo-GRM</span>
+        <span class="flex items-center gap-1 text-emerald-600">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          Active (28ms)
+        </span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN CONTENT AREA ================= -->
+  <main class="flex-1 flex flex-col min-w-0 bg-[#F8FAFC]">
+
+    <!-- Top Utility Header -->
+    <header class="h-16 border-b border-slate-200 bg-white/80 backdrop-blur px-6 md:px-10 flex items-center justify-between">
+      <div class="flex items-center gap-3 flex-1 max-w-xl">
+        <div class="relative w-full">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="search" aria-hidden="true" class="lucide lucide-search w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
+          <input type="text" placeholder="Search records, doctors, prescriptions, ABHA ID..." class="w-full pl-10 pr-4 py-2 bg-slate-100/70 border border-slate-200/80 rounded-xl text-xs placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-navy/20 focus:border-brand-navy">
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3 md:gap-4 pl-4">
+        <div class="hidden sm:flex items-center gap-2 bg-teal-50 border border-teal-200/70 text-teal-800 px-3 py-1.5 rounded-xl text-xs font-medium">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield-check" aria-hidden="true" class="lucide lucide-shield-check w-3.5 h-3.5 text-teal-600"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+          <span class="">Secure Shield: Active</span>
+        </div>
+        <button class="w-9 h-9 rounded-xl border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-50 transition-colors relative">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bell" aria-hidden="true" class="lucide lucide-bell w-4 h-4"><path d="M10.268 21a2 2 0 0 0 3.464 0"></path><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path></svg>
+          <span class="w-2 h-2 rounded-full bg-red-500 absolute top-2 right-2"></span>
+        </button>
+        <button class="w-9 h-9 rounded-full bg-brand-navy text-white flex items-center justify-center text-xs font-semibold">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="user" aria-hidden="true" class="lucide lucide-user w-4 h-4"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Subheader Notification Bar -->
+    <div class="bg-white border-b border-slate-200/70 px-6 md:px-10 py-2.5 flex items-center justify-between text-xs text-slate-600">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        <span class="font-medium text-slate-700">Ayushman Bharat Digital Mission (ABDM) Sync Active</span>
+        <span class="text-slate-400">•</span>
+        <span class="text-slate-500 font-mono text-[11px]">Latency 28ms</span>
+      </div>
+      <div class="hidden sm:flex items-center gap-2 text-slate-500 font-medium">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="lock" aria-hidden="true" class="lucide lucide-lock w-3.5 h-3.5 text-slate-400"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        <span class="">National Health Records Vault Linked</span>
+      </div>
+    </div>
+
+    <!-- Page Body Container -->
+    <div class="flex-1 px-6 md:px-12 py-8 max-w-5xl mx-auto w-full flex flex-col justify-center">
+
+      <!-- 1. Page Header -->
+      <div class="mb-8 text-center sm:text-left">
+        <div class="inline-flex items-center gap-2 bg-brand-lavender text-brand-lavender-text font-semibold text-xs px-3 py-1 rounded-full mb-3 border border-[#D5D5F9]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sparkles" aria-hidden="true" class="lucide lucide-sparkles w-3.5 h-3.5 text-[#5C59A5]"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>
+          <span class="">EMERGENCY CLINICAL INGRESS • ZERO FRICTION</span>
+        </div>
+        <h1 class="font-headline font-bold text-3xl md:text-4xl text-brand-navy tracking-tight">Hospital ER Access</h1>
+        <p class="text-slate-600 text-sm md:text-base mt-2 max-w-2xl">
+          Give emergency responders instant access to your critical health information.
+        </p>
+      </div>
+
+      <!-- 2. Main Focal Module: Emergency Room Access Card -->
+      <div class="bg-white rounded-2xl border-2 border-brand-danger-border p-7 md:p-10 shadow-focal relative overflow-hidden transition-all">
+        <!-- Subtle Accent Ambient Glow at top edge -->
+        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-400 via-brand-danger to-red-400"></div>
+
+        <div class="flex flex-col items-center text-center max-w-xl mx-auto">
+
+          <!-- Red-tinted Accent Icon Badge (Pulse/Heartbeat + Hospital Cross) -->
+          <div class="w-16 h-16 rounded-2xl bg-brand-danger-tint border border-brand-danger-border flex items-center justify-center mb-5 relative group">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="activity" aria-hidden="true" class="lucide lucide-activity w-8 h-8 text-brand-danger stroke-[2.25]"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg>
+            <!-- Small Cross Pip -->
+            <span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-brand-danger text-white flex items-center justify-center text-[10px] font-bold shadow-sm">
+              +
+            </span>
+          </div>
+
+          <!-- Card Title -->
+          <h2 class="font-headline font-bold text-2xl md:text-3xl text-brand-navy tracking-tight">
+            Emergency Room Access
+          </h2>
+
+          <!-- One-line Description in muted gray text -->
+          <p class="text-slate-500 text-sm md:text-base mt-2 leading-relaxed">
+            Instant access for hospital staff via QR/NFC scan.
+          </p>
+
+          <!-- Verified Patient Credentials Summary Pill -->
+          <div class="my-6 w-full bg-slate-50/90 border border-slate-200 rounded-xl p-3.5 flex flex-wrap items-center justify-between gap-3 text-xs">
+            <div class="flex items-center gap-2.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+              <span class="text-slate-500">Prepared For:</span>
+              <span class="font-semibold text-slate-800">Rajesh V. Sharma</span>
+              <span class="font-mono text-slate-400 text-[11px]">(O+ Rh Pos)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="bg-red-50 text-red-700 font-semibold px-2 py-0.5 rounded border border-red-200 text-[11px]">
+                Allergy: Penicillin
+              </span>
+              <span class="bg-brand-lavender text-brand-lavender-text font-medium px-2 py-0.5 rounded text-[11px]">
+                NFC / QR Sync Ready
+              </span>
+            </div>
+          </div>
+
+          <!-- Primary Action Button: Styled in Deep Blue (Not Red) -->
+          <div class="w-full sm:w-auto flex flex-col sm:flex-row items-center justify-center gap-3">
+            <button class="w-full sm:w-auto px-8 py-3.5 bg-brand-navy hover:bg-brand-navy-dark text-white font-medium text-sm rounded-xl shadow-md transition-all flex items-center justify-center gap-2.5 group">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="qr-code" aria-hidden="true" class="lucide lucide-qr-code w-4 h-4 text-teal-300 group-hover:scale-110 transition-transform"><rect width="5" height="5" x="3" y="3" rx="1"></rect><rect width="5" height="5" x="16" y="3" rx="1"></rect><rect width="5" height="5" x="3" y="16" rx="1"></rect><path d="M21 16h-3a2 2 0 0 0-2 2v3"></path><path d="M21 21v.01"></path><path d="M12 7v3a2 2 0 0 1-2 2H7"></path><path d="M3 12h.01"></path><path d="M12 3h.01"></path><path d="M12 16v.01"></path><path d="M16 12h1"></path><path d="M21 12v.01"></path><path d="M12 21v-1"></path></svg>
+              <span class="">View ER Access Card</span>
+            </button>
+            <button class="w-full sm:w-auto px-5 py-3.5 bg-slate-100 hover:bg-slate-200/80 text-slate-700 font-medium text-xs rounded-xl transition-colors flex items-center justify-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="share-2" aria-hidden="true" class="lucide lucide-share-2 w-3.5 h-3.5 text-slate-500"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line></svg>
+              <span class="">Emergency Contacts</span>
+            </button>
+          </div>
+
+          <!-- 4. Default / Empty State Preview Callout -->
+          <div class="mt-8 pt-6 border-t border-slate-100 w-full flex items-center justify-center gap-2 text-xs text-slate-400">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="info" aria-hidden="true" class="lucide lucide-info w-3.5 h-3.5 text-slate-400"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+            <span class="">Your ER Access Card will appear here once generated • Token: <span class="font-mono text-slate-500">EK-TR-88190-V4</span></span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 3. Supporting Context: Trust / Info Points (Minimal Icons & Lightweight Style) -->
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <!-- Trust Point 1 -->
+        <div class="bg-white border border-slate-200 rounded-xl p-4 flex items-center gap-3.5 shadow-card">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-teal-700 flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="wifi-off" aria-hidden="true" class="lucide lucide-wifi-off w-5 h-5"><path d="M12 20h.01"></path><path d="M8.5 16.429a5 5 0 0 1 7 0"></path><path d="M5 12.859a10 10 0 0 1 5.17-2.69"></path><path d="M19 12.859a10 10 0 0 0-2.007-1.523"></path><path d="M2 8.82a15 15 0 0 1 4.177-2.643"></path><path d="M22 8.82a15 15 0 0 0-11.288-3.764"></path><path d="m2 2 20 20"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-slate-800 text-xs md:text-sm">Works offline</h3>
+            <p class="text-[11px] text-slate-500 mt-0.5">Cached biometric keys function without internet</p>
+          </div>
+        </div>
+
+        <!-- Trust Point 2 -->
+        <div class="bg-white border border-slate-200 rounded-xl p-4 flex items-center gap-3.5 shadow-card">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-teal-700 flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-check" aria-hidden="true" class="lucide lucide-check-check w-5 h-5"><path d="M18 6 7 17l-5-5"></path><path d="m22 10-7.5 7.5L13 16"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-slate-800 text-xs md:text-sm">ABDM &amp; ISO 27799</h3>
+            <p class="text-[11px] text-slate-500 mt-0.5">Government-certified clinical data privacy</p>
+          </div>
+        </div>
+
+        <!-- Trust Point 3 -->
+        <div class="bg-white border border-slate-200 rounded-xl p-4 flex items-center gap-3.5 shadow-card">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-teal-700 flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="zap" aria-hidden="true" class="lucide lucide-zap w-5 h-5"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-slate-800 text-xs md:text-sm">Scan under 1 second</h3>
+            <p class="text-[11px] text-slate-500 mt-0.5">Instant triage intake for paramedics &amp; trauma ER</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Emergency Operational Ribbon -->
+      <div class="mt-6 bg-slate-100/80 border border-slate-200 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="building-2" aria-hidden="true" class="lucide lucide-building-2 w-4 h-4 text-brand-navy"><path d="M10 12h4"></path><path d="M10 8h4"></path><path d="M14 21v-3a2 2 0 0 0-4 0v3"></path><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path></svg>
+          <span class=""><strong class="text-slate-800">Connected Trauma Hub:</strong> Apollo Greams Hospital, Bay 3 Trauma Ward</span>
+        </div>
+        <div class="flex items-center gap-3 font-mono text-[11px] text-slate-500">
+          <span class="">Protocol: Level-1 Triage</span>
+          <span class="">•</span>
+          <span class="text-teal-700 font-semibold">Fast-Pass Authorized</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Lucide script initialization -->
+  <script>
+    lucide.createIcons();
+  </script>
+
+
+
+</body></html>

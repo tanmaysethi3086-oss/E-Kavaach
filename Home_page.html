@@ -1,0 +1,910 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+    @layer base { 
+      html, body { margin: 0; padding: 0; } 
+      body { overscroll-behavior: none; } 
+      main > :first-child { margin-top: 0 !important; } 
+      main > :last-child { margin-bottom: 0 !important; } 
+    } 
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-low": "#f2f3f8",
+            "on-secondary-container": "#006d7b",
+            "on-primary-fixed": "#001e2d",
+            "outline-variant": "#bfc7cf",
+            "surface-bright": "#f8f9fd",
+            "surface-dim": "#d8dade",
+            "error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#004e59",
+            "surface-container": "#eceef2",
+            "on-secondary-fixed": "#001f24",
+            "inverse-surface": "#2d3134",
+            "secondary-container": "#92edff",
+            "secondary-fixed": "#9eefff",
+            "inverse-primary": "#96cdf2",
+            "on-surface-variant": "#41484d",
+            "tertiary-container": "#005147",
+            "surface-variant": "#e0e3e6",
+            "on-primary-fixed-variant": "#004c6b",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-fixed": "#00201c",
+            "primary-fixed": "#c6e7ff",
+            "on-primary": "#ffffff",
+            "surface-tint": "#03658c",
+            "on-surface": "#191c1f",
+            "surface": "#f7f9fd",
+            "inverse-on-surface": "#eff1f4",
+            "tertiary": "#003831",
+            "on-tertiary-fixed-variant": "#005047",
+            "on-error": "#ffffff",
+            "error": "#ba1a1a",
+            "on-secondary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-container": "#81c2b5",
+            "surface-container-high": "#e7e8ec",
+            "primary": "#00354c",
+            "tertiary-fixed-dim": "#91d3c6",
+            "tertiary-fixed": "#79f7e3",
+            "outline": "#70787f",
+            "surface-container-highest": "#e0e3e6",
+            "secondary-fixed-dim": "#77d4e5",
+            "on-error-container": "#93000a",
+            "on-primary-container": "#85bde1",
+            "primary-fixed-dim": "#96cdf2",
+            "primary-container": "#004d6c",
+            "background": "#f8f9fd",
+            "on-background": "#191c1f",
+            "secondary": "#006876"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "grid-gutter": "1.5rem",
+            "grid-margin": "2rem",
+            "space-2xs": "0.25rem",
+            "space-xl": "2rem",
+            "space-xs": "0.5rem",
+            "space-sm": "0.75rem",
+            "space-md": "1rem",
+            "space-2xl": "3rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Inter"],
+            "body-md": ["Inter"],
+            "label-lg": ["Inter"],
+            "body-lg": ["Inter"],
+            "headline-lg": ["Space Grotesk"],
+            "headline-xl-mobile": ["Space Grotesk"],
+            "body-sm": ["Inter"],
+            "label-md": ["Inter"],
+            "headline-md": ["Space Grotesk"],
+            "headline-xl": ["Space Grotesk"],
+            "headline-sm": ["Space Grotesk"]
+          },
+          "fontSize": {
+            "label-sm": ["10px", { "lineHeight": "14px", "fontWeight": "500" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "500" }]
+          }
+        }
+      }
+    };
+  </script>
+<style id="marquee-style">@keyframes marquee-scroll { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } } .animate-marquee-infinite { display: flex; width: max-content; animation: marquee-scroll 24s linear infinite; } .animate-marquee-infinite:hover { animation-play-state: paused; }</style></head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
+<!-- NAVBAR -->
+<a href="tel:+13029887308" class="fixed top-0 left-0 right-0 z-50 h-7 bg-error text-on-error flex items-center overflow-hidden cursor-pointer no-underline select-none" title="Call Emergency SOS"><div class="animate-marquee-infinite flex items-center whitespace-nowrap"><div class="flex items-center gap-space-xl pr-space-xl"><span class="inline-flex items-center gap-2"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span></span><span class="font-label-sm uppercase tracking-wider font-bold text-white">EMERGENCY SOS</span><span class="font-label-sm text-white/90 font-medium">+1 (302) 988-7308</span></span><span class="text-white/40 text-xs">•</span><span class="inline-flex items-center gap-2"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span></span><span class="font-label-sm uppercase tracking-wider font-bold text-white">EMERGENCY SOS</span><span class="font-label-sm text-white/90 font-medium">+1 (302) 988-7308</span></span><span class="text-white/40 text-xs">•</span><span class="inline-flex items-center gap-2"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span></span><span class="font-label-sm uppercase tracking-wider font-bold text-white">EMERGENCY SOS</span><span class="font-label-sm text-white/90 font-medium">+1 (302) 988-7308</span></span><span class="text-white/40 text-xs">•</span><span class="inline-flex items-center gap-2"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span></span><span class="font-label-sm uppercase tracking-wider font-bold text-white">EMERGENCY SOS</span><span class="font-label-sm text-white/90 font-medium">+1 (302) 988-7308</span></span><span class="text-white/40 text-xs">•</span></div><div class="flex items-center gap-space-xl pr-space-xl" aria-hidden="true"><span class="inline-flex items-center gap-2"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span></span><span class="font-label-sm uppercase tracking-wider font-bold text-white">EMERGENCY SOS</span><span class="font-label-sm text-white/90 font-medium">+1 (302) 988-7308</span></span><span class="text-white/40 text-xs">•</span><span class="inline-flex items-center gap-2"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span></span><span class="font-label-sm uppercase tracking-wider font-bold text-white">EMERGENCY SOS</span><span class="font-label-sm text-white/90 font-medium">+1 (302) 988-7308</span></span><span class="text-white/40 text-xs">•</span><span class="inline-flex items-center gap-2"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span></span><span class="font-label-sm uppercase tracking-wider font-bold text-white">EMERGENCY SOS</span><span class="font-label-sm text-white/90 font-medium">+1 (302) 988-7308</span></span><span class="text-white/40 text-xs">•</span><span class="inline-flex items-center gap-2"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span></span><span class="font-label-sm uppercase tracking-wider font-bold text-white">EMERGENCY SOS</span><span class="font-label-sm text-white/90 font-medium">+1 (302) 988-7308</span></span><span class="text-white/40 text-xs">•</span></div></div></a><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]" style="top: 1.75rem;">
+<div class="h-20 w-full px-grid-margin flex items-center justify-between gap-space-lg">
+<div class="flex items-center gap-space-sm">
+<img alt="Logo" class="h-8 w-auto object-contain" src="Logo.jpg">
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold">E-KAVACH</span>
+<span class="hidden xl:inline-flex items-center gap-space-2xs px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Emergency OS
+        </span>
+</div>
+<nav class="hidden lg:flex items-center gap-space-md xl:gap-space-lg" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg">
+<a aria-current="page" class="px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary font-semibold rounded-lg" href="#hero">Home</a>
+<a class="px-space-sm py-space-xs font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors" href="#services">Service</a>
+<a class="px-space-sm py-space-xs font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors" href="#about-us">About us</a>
+<a class="px-space-sm py-space-xs font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors" href="#help-support">Help & Support</a>
+</nav>
+<div class="flex items-center gap-space-sm">
+<a class="inline-flex items-center justify-center px-space-lg py-space-xs rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container hover:text-on-primary transition-colors shadow-[0_1px_4px_rgba(0,53,76,0.12)]" data-path="get-health-id" href="#registration-card" onclick="scrollToRegistration(event)">Get Your Health ID</a>
+
+</div>
+</div>
+</header>
+<main class="w-full pt-20 bg-surface" style="padding-top: calc(6.75rem);">
+<div class="flex flex-col w-full font-body-md text-on-surface">
+<!-- HERO SECTION -->
+<section id="hero" class="relative w-full overflow-hidden px-grid-margin py-space-xl lg:py-space-2xl bg-white">
+<div aria-hidden="true" class="pointer-events-none absolute inset-0 z-0">
+  <div class="absolute inset-0 bg-no-repeat bg-contain sm:bg-cover bg-left sm:bg-center opacity-25" style="background-image: url('Background.jpg');"></div>
+  <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to right, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.20) 50%, transparent 80%);"></div>
+</div>
+<!-- Ambient subtle glow -->
+<div aria-hidden="true" class="pointer-events-none absolute -top-40 -left-20 h-96 w-96 rounded-full bg-primary-fixed/30 blur-3xl"></div>
+<div aria-hidden="true" class="pointer-events-none absolute top-1/2 -right-20 h-96 w-96 rounded-full bg-secondary-fixed/20 blur-3xl"></div>
+<div class="mx-auto max-w-7xl relative z-20">
+<div class="grid grid-cols-1 items-start gap-space-xl lg:grid-cols-12 lg:gap-grid-gutter">
+<!-- Left Column: Copy & CTAs -->
+<div class="flex flex-col gap-space-md lg:col-span-6 lg:pr-space-md pt-4">
+<div class="inline-flex items-center gap-space-xs self-start rounded-full bg-surface-container-high px-space-sm py-1 shadow-sm">
+<span class="inline-block h-2 w-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide text-on-surface-variant uppercase">Mission-Critical Care Infrastructure</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight font-bold">
+                Your medical history, <span class="text-secondary">ready before you are.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                A scannable Digital Health ID that gives doctors instant access to critical medical history the moment a patient arrives — no forms, no waiting.
+              </p>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<a class="inline-flex items-center justify-center rounded-lg bg-primary px-space-xl py-space-sm font-label-lg text-label-lg text-on-primary shadow-sm hover:bg-primary-container transition-all" data-path="get-health-id" href="#registration-card" onclick="scrollToRegistration(event)">
+<span class="material-symbols-outlined mr-2 text-[20px]">badge</span>
+                  Create Your Health ID
+                </a>
+<a class="inline-flex items-center justify-center rounded-lg bg-surface-container px-space-lg py-space-sm font-label-lg text-label-lg text-primary hover:bg-surface-container-high transition-all" data-path="for-hospitals" href="#">
+<span class="material-symbols-outlined mr-2 text-[20px]">corporate_fare</span>
+                  For Hospitals &amp; Doctors
+                </a>
+</div>
+<!-- Mini trust metric below CTAs -->
+<div class="flex items-center gap-space-md pt-space-xs text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm">Instant Golden Hour Triaging</span>
+</div>
+<div class="h-3 w-px bg-outline-variant"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">lock</span>
+<span class="font-label-sm text-label-sm">ABDM &amp; ISO 27799 Compliant</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Registration Card Replacement -->
+<div class="relative lg:col-span-6 flex justify-center lg:justify-end">
+<div class="relative w-full max-w-lg scroll-mt-28" id="registration-card">
+<!-- Floating Critical Status Badge -->
+<div class="absolute -top-3 -right-2 z-30 flex items-center gap-2 rounded-full bg-error-container px-space-sm py-1 text-on-error-container shadow-md">
+<span class="h-2 w-2 rounded-full bg-error animate-ping"></span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide uppercase">Emergency Triaging Active</span>
+</div>
+<!-- Registration Main Container Card -->
+<div class="relative rounded-2xl bg-surface-container-lowest p- space-md sm:p-space-lg shadow-xl ring-1 ring-outline-variant/30">
+<!-- Card Header -->
+<div class="flex items-center justify-between pb-space-md border-b border-surface-container">
+<div class="flex items-center gap-space-sm">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS4xN7aHXlWluNP-A6zHiOqHONQ_5E11kraochyOltMQA2n8bhmlCGud_oM9GuaLLTVwfJ1_f6LIXmQONR9Dqum33tKC7Y3LLGi7vhuiaE3OIkT6qKQljm_3XHM3VFHekZndSYnxMxjmKH2OAbqjtwX8UHhgzYy8kekYyhi3Uae-nBzDDDUMC1RYi94PkDyW24M67CZB6N48w5yipZ9CYdOL3BWmvCEN4E8B0UhEZvDTwC8hfKq7_BtvGyZtPOTPXli0s" alt="E-KAVACH Logo" class="h-11 w-auto object-contain rounded-lg">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="inline-block h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold transition-all duration-200" id="role-eyebrow">CLINICAL ACCESS NODE</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Register for E-KAVACH</h3>
+</div>
+</div>
+<span class="rounded-md bg-secondary-fixed/20 px-2 py-0.5 font-label-sm text-label-sm font-semibold text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>256-BIT SSL
+                    </span>
+</div>
+<!-- Role Tab Switcher -->
+<div class="mt-space-md p-1 bg-surface-container-low rounded-xl border border-outline-variant/40 flex items-center gap-1 text-label-md">
+<button class="flex-1 py-1.5 px-2 rounded-lg text-center transition-all duration-200 text-on-surface-variant hover:text-on-surface font-medium" id="tab-patient" onclick="switchRegRole('patient', true)" type="button">
+                      For Patient
+                    </button>
+<button class="flex-1 py-1.5 px-2 rounded-lg text-center transition-all duration-200 text-on-surface-variant hover:text-on-surface font-medium" id="tab-doctor" onclick="switchRegRole('doctor', true)" type="button">
+                      For Doctor
+                    </button>
+<button class="flex-1 py-1.5 px-2 rounded-lg text-center transition-all duration-200 bg-primary text-on-primary shadow-xs font-semibold" id="tab-hospital" onclick="switchRegRole('hospital', true)" type="button">
+                      For Hospital
+                    </button>
+</div>
+<!-- Carousel Viewport for 3 Registration Forms -->
+<div class="relative w-full overflow-hidden">
+<div class="flex w-[300%] transition-transform duration-300 ease-in-out" id="reg-carousel-track" style="transform: translateX(-66.6667%);">
+<!-- Form 1: Patient Registration -->
+<div class="w-1/3 flex-shrink-0">
+<form class="flex flex-col gap-3.5 py-space-md" onsubmit="return false;">
+<!-- Name on Aadhaar -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="patient-reg-name">Name on Aadhaar</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">person</span>
+<input class="w-full rounded-lg border border-outline-variant bg-surface-container-low py-2 pl-9 pr-space-sm font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest transition-all" id="patient-reg-name" placeholder="e.g. Rajesh V. Sharma" type="text">
+</div>
+</div>
+<!-- DOB & Phone row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="patient-reg-dob">Date of Birth</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">calendar_today</span>
+<input class="w-full rounded-lg border border-outline-variant bg-surface-container-low py-2 pl-9 pr-2 font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest transition-all text-xs sm:text-sm" id="patient-reg-dob" type="date">
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="patient-reg-phone">Phone Number</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">call</span>
+<span class="absolute left-8 font-label-md text-label-md text-on-surface-variant font-semibold pl-1">+91</span>
+<input class="w-full rounded-lg border border-outline-variant bg-surface-container-low py-2 pl-[4.5rem] pr-space-sm font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest transition-all" id="patient-reg-phone" placeholder="98401 22819" type="tel">
+</div>
+</div>
+</div>
+<!-- Email (Optional) -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="patient-reg-email">Email</label>
+<span class="font-label-sm text-label-sm text-on-surface-variant">optional</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">mail</span>
+<input class="w-full rounded-lg border border-outline-variant bg-surface-container-low py-2 pl-9 pr-space-sm font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest transition-all" id="patient-reg-email" placeholder="rajesh.sharma@example.com" type="email">
+</div>
+</div>
+<!-- Aadhaar Card Number -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="patient-reg-aadhaar">Aadhaar Card Number</label>
+<span class="font-label-sm text-label-sm text-secondary font-medium flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">verified</span>ABHA Linked
+                              </span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">badge</span>
+<input class="w-full rounded-lg border border-outline-variant bg-surface-container-low py-2 pl-9 pr-space-sm font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest transition-all" id="patient-reg-aadhaar" oninput="handleAadhaarInput(this.value)" placeholder="XXXX-XXXX-XXXX" type="text">
+</div>
+</div>
+<!-- OTP Input (Dynamic Locked/Unlocked State) -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="patient-reg-otp">One-Time Password (OTP)</label>
+<span class="hidden px-1.5 py-0.2 rounded text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800" id="patient-otp-badge">Unlocked</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium cursor-pointer hover:text-secondary transition-colors" id="patient-resend-otp">Resend OTP (00:27)</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none" id="patient-otp-icon">lock</span>
+<input class="w-full rounded-lg border border-outline-variant/60 bg-surface-container-high/40 py-2 pl-9 pr-space-sm font-body-md text-body-md text-on-surface/50 placeholder:text-on-surface-variant/40 focus:outline-none transition-all cursor-not-allowed" disabled="" id="patient-reg-otp" placeholder="Enter 6-digit OTP received on mobile" type="text">
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 pt-0.5" id="patient-otp-helper">
+<span class="material-symbols-outlined text-[14px]">info</span> Complete required field above to unlock OTP
+                            </p>
+</div>
+<button class="mt-1 inline-flex items-center justify-center gap-2 rounded-lg bg-primary py-2.5 px-space-lg font-label-lg text-label-lg font-semibold text-on-primary shadow-sm hover:bg-primary-container transition-all" type="button">
+<span class="">Create Patient Account</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<div class="flex items-center justify-center pt-2 text-center border-t border-surface-container">
+<p class="font-body-sm text-body-sm text-on-surface-variant">Already have an account? <a class="font-semibold text-secondary hover:text-primary transition-colors inline-flex items-center gap-0.5" href="#">Sign In<span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></p>
+</div>
+</form>
+</div>
+<!-- Form 2: Doctor Registration -->
+<div class="w-1/3 flex-shrink-0">
+<form class="flex flex-col gap-3.5 py-space-md" onsubmit="return false;">
+<!-- Doctor Name -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="doctor-reg-name">Doctor Name</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">person</span>
+<input class="w-full rounded-lg border border-outline-variant bg-surface-container-low py-2 pl-9 pr-space-sm font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest transition-all" id="doctor-reg-name" placeholder="e.g. Dr. Kavitha Menon" type="text">
+</div>
+</div>
+<!-- Phone & Email -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="doctor-reg-phone">Phone Number</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">call</span>
+<span class="absolute left-8 font-label-md text-label-md text-on-surface-variant font-semibold pl-1">+91</span>
+<input class="w-full rounded-lg border border-outline-variant bg-surface-container-low py-2 pl-[4.5rem] pr-space-sm font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest transition-all" id="doctor-reg-phone" placeholder="98401 22819" type="tel">
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="doctor-reg-email">Email</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">mail</span>
+<input class="w-full rounded-lg border border-outline-variant bg-surface-container-low py-2 pl-9 pr-space-sm font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest transition-all text-xs sm:text-sm" id="doctor-reg-email" placeholder="kavitha.menon@apollo.org" type="email">
+</div>
+</div>
+</div>
+<!-- Doctor License ID Number -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="doctor-license-id">Doctor License ID Number</label>
+<span class="font-label-sm text-label-sm text-on-surface-variant">NMC / State Council</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">badge</span>
+<input class="w-full rounded-lg border border-outline-variant bg-surface-container-low py-2 pl-9 pr-space-sm font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest transition-all" id="doctor-license-id" oninput="handleDoctorLicenseInput(this.value)" placeholder="e.g. NMC-44912-TN" type="text">
+</div>
+</div>
+<!-- OTP Input -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="doctor-reg-otp">Clinical OTP</label>
+<span class="hidden px-1.5 py-0.2 rounded text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800" id="doctor-otp-badge">Unlocked</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium cursor-pointer hover:text-secondary transition-colors" id="doctor-resend-otp">Resend OTP (00:27)</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none" id="doctor-otp-icon">lock</span>
+<input class="w-full rounded-lg border border-outline-variant/60 bg-surface-container-high/40 py-2 pl-9 pr-space-sm font-body-md text-body-md text-on-surface/50 placeholder:text-on-surface-variant/40 focus:outline-none transition-all cursor-not-allowed" disabled="" id="doctor-reg-otp" placeholder="Enter OTP sent to registered registry" type="text">
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 pt-0.5" id="doctor-otp-helper">
+<span class="material-symbols-outlined text-[14px]">info</span> Enter Doctor License ID to unlock OTP
+                            </p>
+</div>
+<button class="mt-1 inline-flex items-center justify-center gap-2 rounded-lg bg-primary py-2.5 px-space-lg font-label-lg text-label-lg font-semibold text-on-primary shadow-sm hover:bg-primary-container transition-all" type="button">
+<span class="">Create Doctor Account</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<div class="flex items-center justify-center pt-2 text-center border-t border-surface-container">
+<p class="font-body-sm text-body-sm text-on-surface-variant">Already have clinical credentials? <a class="font-semibold text-secondary hover:text-primary transition-colors inline-flex items-center gap-0.5" href="#">Sign In<span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></p>
+</div>
+</form>
+</div>
+<!-- Form 3: Hospital / Admin Registration -->
+<div class="w-1/3 flex-shrink-0">
+<form class="flex flex-col gap-3.5 py-space-md" onsubmit="return false;">
+<!-- Hospital Name -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="hospital-reg-name">Hospital Name</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">domain</span>
+<input class="w-full rounded-lg border border-outline-variant bg-surface-container-low py-2 pl-9 pr-space-sm font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest transition-all" id="hospital-reg-name" placeholder="e.g. Apollo Greams Trauma Hub" type="text">
+</div>
+</div>
+<!-- Registration ID & Clinical ID -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="hospital-reg-id">Registration ID</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">shield</span>
+<input class="w-full rounded-lg border border-outline-variant bg-surface-container-low py-2 pl-9 pr-space-sm font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest transition-all text-xs sm:text-sm" id="hospital-reg-id" oninput="handleHospitalIdInput(this.value)" placeholder="e.g. HSP-REG-2210" type="text">
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="hospital-reg-clinical-id">Clinical ID</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">badge</span>
+<input class="w-full rounded-lg border border-outline-variant bg-surface-container-low py-2 pl-9 pr-space-sm font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest transition-all text-xs sm:text-sm" id="hospital-reg-clinical-id" placeholder="e.g. IND-TN-APO-09" type="text">
+</div>
+</div>
+</div>
+<!-- Contact & Email -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="hospital-reg-contact">Hospital Contact</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">call</span>
+<input class="w-full rounded-lg border border-outline-variant bg-surface-container-low py-2 pl-9 pr-space-sm font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest transition-all" id="hospital-reg-contact" placeholder="+91 44 2829 0200" type="tel">
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="hospital-reg-mail">Registered Mail</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none">mail</span>
+<input class="w-full rounded-lg border border-outline-variant bg-surface-container-low py-2 pl-9 pr-space-sm font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest transition-all" id="hospital-reg-mail" placeholder="admin@apollogreams.org" type="email">
+</div>
+</div>
+</div>
+<!-- OTP Input -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="hospital-reg-otp">Node Verification OTP</label>
+<span class="px-1.5 py-0.2 rounded text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 hidden" id="hospital-otp-badge">Unlocked</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium cursor-pointer hover:text-secondary transition-colors" id="hospital-resend-otp">Resend OTP (00:27)</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant pointer-events-none" id="hospital-otp-icon">lock</span>
+<input class="w-full rounded-lg border border-outline-variant/60 py-2 pl-9 pr-space-sm font-body-md text-body-md placeholder:text-on-surface-variant/40 focus:outline-none transition-all cursor-not-allowed bg-surface-container-high/40 text-on-surface/50" id="hospital-reg-otp" placeholder="Enter institutional OTP authorization" type="text" disabled="">
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 pt-0.5" id="hospital-otp-helper"><span class="material-symbols-outlined text-[14px]">info</span> Complete Registration ID above to unlock OTP</p>
+</div>
+<button class="mt-1 inline-flex items-center justify-center gap-2 rounded-lg bg-primary py-2.5 px-space-lg font-label-lg text-label-lg font-semibold text-on-primary shadow-sm hover:bg-primary-container transition-all" type="button">
+<span class="">Create Hospital Account</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<div class="flex items-center justify-center pt-2 text-center border-t border-surface-container">
+<p class="font-body-sm text-body-sm text-on-surface-variant">Already registered? <a class="font-semibold text-secondary hover:text-primary transition-colors inline-flex items-center gap-0.5" href="#">Sign In<span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></p>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Shared Bottom Strip with Latency -->
+<div class="pt-space-xs border-t border-surface-container flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>ABDM Gateway Active</span>
+<span class="text-primary font-semibold">HSM Latency: 0.12s</span>
+</div>
+</div>
+<!-- Floating Overlay Card: Doctor Verification Note -->
+<div class="absolute -bottom-6 -left-4 z-20 flex items-center gap-space-sm rounded-xl bg-surface-container-lowest p-space-sm shadow-lg ring-1 ring-outline-variant/30">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-on-primary">
+<span class="material-symbols-outlined text-[20px]">stethoscope</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">Dr. Kavitha Menon, ER Lead</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">"Zero lag on drug interactions before intubation."</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- JAVASCRIPT FOR REGISTRATION CAROUSEL & DYNAMIC OTP UNLOCK -->
+<script>
+        let userManuallyChangedRole = false;
+
+        function switchRegRole(role, isUserAction = false) {
+          if (isUserAction) {
+            userManuallyChangedRole = true;
+          }
+          const track = document.getElementById('reg-carousel-track');
+          const eyebrow = document.getElementById('role-eyebrow');
+          const tabPatient = document.getElementById('tab-patient');
+          const tabDoctor = document.getElementById('tab-doctor');
+          const tabHospital = document.getElementById('tab-hospital');
+
+          const activeClasses = ['bg-primary', 'text-on-primary', 'shadow-xs', 'font-semibold'];
+          const inactiveClasses = ['text-on-surface-variant', 'hover:text-on-surface', 'font-medium'];
+
+          [tabPatient, tabDoctor, tabHospital].forEach(tab => {
+            tab.classList.remove(...activeClasses);
+            tab.classList.add(...inactiveClasses);
+          });
+
+          if (role === 'patient') {
+            track.style.transform = 'translateX(0%)';
+            eyebrow.textContent = 'PATIENT ACCESS NODE';
+            tabPatient.classList.add(...activeClasses);
+            tabPatient.classList.remove(...inactiveClasses);
+          } else if (role === 'doctor') {
+            track.style.transform = 'translateX(-33.333333%)';
+            eyebrow.textContent = 'CLINICAL ACCESS NODE';
+            tabDoctor.classList.add(...activeClasses);
+            tabDoctor.classList.remove(...inactiveClasses);
+          } else if (role === 'hospital') {
+            track.style.transform = 'translateX(-66.666666%)';
+            eyebrow.textContent = 'CLINICAL ACCESS NODE';
+            tabHospital.classList.add(...activeClasses);
+            tabHospital.classList.remove(...inactiveClasses);
+          }
+        }
+
+        function scrollToRegistration(e) {
+          if (e) e.preventDefault();
+          if (!userManuallyChangedRole) {
+            switchRegRole('patient', false);
+          }
+          const elem = document.getElementById('registration-card');
+          if (elem) {
+            const navOffset = 110;
+            const top = elem.getBoundingClientRect().top + window.pageYOffset - navOffset;
+            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+            if (history.pushState) {
+              history.pushState(null, null, '#registration-card');
+            } else {
+              window.location.hash = '#registration-card';
+            }
+            setTimeout(function() {
+              const firstInput = elem.querySelector('input:not([disabled])');
+              if (firstInput) {
+                firstInput.focus({ preventScroll: true });
+              }
+            }, 400);
+          }
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+          if (window.location.hash === '#registration-card') {
+            setTimeout(function() {
+              scrollToRegistration();
+            }, 150);
+          }
+        });
+
+        window.addEventListener('hashchange', function() {
+          if (window.location.hash === '#registration-card') {
+            scrollToRegistration();
+          }
+        });
+
+        function unlockField(inputElem, iconElem, badgeElem, helperElem, helperTextUnlocked) {
+          inputElem.disabled = false;
+          inputElem.classList.remove('cursor-not-allowed', 'bg-surface-container-high/40', 'text-on-surface/50');
+          inputElem.classList.add('bg-surface-container-low', 'text-on-surface', 'focus:ring-2', 'focus:ring-secondary', 'focus:bg-surface-container-lowest');
+          iconElem.textContent = 'lock_open';
+          iconElem.classList.add('text-secondary');
+          badgeElem.classList.remove('hidden');
+          helperElem.innerHTML = '<span class="material-symbols-outlined text-[14px] text-emerald-600">check_circle</span> ' + helperTextUnlocked;
+          helperElem.classList.add('text-emerald-700');
+        }
+
+        function lockField(inputElem, iconElem, badgeElem, helperElem, helperTextLocked) {
+          inputElem.disabled = true;
+          inputElem.classList.add('cursor-not-allowed', 'bg-surface-container-high/40', 'text-on-surface/50');
+          inputElem.classList.remove('bg-surface-container-low', 'text-on-surface', 'focus:ring-2', 'focus:ring-secondary', 'focus:bg-surface-container-lowest');
+          iconElem.textContent = 'lock';
+          iconElem.classList.remove('text-secondary');
+          badgeElem.classList.add('hidden');
+          helperElem.innerHTML = '<span class="material-symbols-outlined text-[14px]">info</span> ' + helperTextLocked;
+          helperElem.classList.remove('text-emerald-700');
+        }
+
+        function handleAadhaarInput(val) {
+          const otpInput = document.getElementById('patient-reg-otp');
+          const otpIcon = document.getElementById('patient-otp-icon');
+          const otpBadge = document.getElementById('patient-otp-badge');
+          const otpHelper = document.getElementById('patient-otp-helper');
+          if (val.trim().length >= 4) {
+            unlockField(otpInput, otpIcon, otpBadge, otpHelper, 'OTP sent to mobile linked with Aadhaar');
+          } else {
+            lockField(otpInput, otpIcon, otpBadge, otpHelper, 'Complete required field above to unlock OTP');
+          }
+        }
+
+        function handleDoctorLicenseInput(val) {
+          const otpInput = document.getElementById('doctor-reg-otp');
+          const otpIcon = document.getElementById('doctor-otp-icon');
+          const otpBadge = document.getElementById('doctor-otp-badge');
+          const otpHelper = document.getElementById('doctor-otp-helper');
+          if (val.trim().length >= 3) {
+            unlockField(otpInput, otpIcon, otpBadge, otpHelper, 'OTP sent to state clinical registry contact');
+          } else {
+            lockField(otpInput, otpIcon, otpBadge, otpHelper, 'Enter Doctor License ID to unlock OTP');
+          }
+        }
+
+        function handleHospitalIdInput(val) {
+          const otpInput = document.getElementById('hospital-reg-otp');
+          const otpIcon = document.getElementById('hospital-otp-icon');
+          const otpBadge = document.getElementById('hospital-otp-badge');
+          const otpHelper = document.getElementById('hospital-otp-helper');
+          if (val.trim().length >= 3) {
+            unlockField(otpInput, otpIcon, otpBadge, otpHelper, 'OTP sent to registered hospital nodal officer');
+          } else {
+            lockField(otpInput, otpIcon, otpBadge, otpHelper, 'Complete Registration ID above to unlock OTP');
+          }
+        }
+      </script>
+<!-- PROBLEM / CONTEXT STRIP -->
+<section class="w-full bg-surface-container py-space-xl px-grid-margin">
+<div class="mx-auto max-w-4xl text-center flex flex-col items-center gap-space-xs">
+<!-- Minimal Pulse Indicator Line -->
+<div class="flex items-center justify-center gap-2 text-secondary mb-space-2xs">
+<div class="h-px w-12 bg-secondary/40"></div>
+<svg class="h-6 w-20 text-secondary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 100 24">
+<polyline points="0,12 30,12 40,2 48,22 56,8 64,16 72,12 100,12"></polyline>
+</svg>
+<div class="h-px w-12 bg-secondary/40"></div>
+</div>
+<p class="font-headline-lg text-headline-lg font-semibold text-primary max-w-3xl leading-snug">
+            Every year, critical minutes are lost collecting information paramedics could already have.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+            In high-acuity trauma cases, the "Golden Hour" often evaporates in paperwork. E-KAVACH eliminates the data void.
+          </p>
+</div>
+</section>
+<!-- ABOUT US / HOW IT WORKS -->
+<section id="about-us" class="w-full py-space-2xl px-grid-margin bg-surface">
+<div class="mx-auto max-w-7xl">
+<div class="flex flex-col items-center text-center mb-space-2xl">
+<span class="font-label-sm text-label-sm font-semibold tracking-wider text-secondary uppercase mb-space-2xs">Process Architecture</span>
+<h2 class="font-headline-xl text-headline-xl font-bold text-primary">How It Works</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-xs">
+              Built for zero-friction adoption by citizens and millisecond-level retrieval by trauma staff.
+            </p>
+</div>
+<!-- 3-Step Horizontal Flow Grid -->
+<div class="relative grid grid-cols-1 md:grid-cols-3 gap-grid-gutter">
+<!-- Step 1 -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-headline-md text-headline-md font-bold text-primary-container">01</span>
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-surface-container-low text-primary">
+<span class="material-symbols-outlined text-[26px]">assignment_turned_in</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-space-xs">
+                Pre-register your health profile
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Store allergies, blood type, conditions, and emergency contacts securely in under 2 minutes with simple biometric verification.
+              </p>
+<div class="mt-space-lg pt-space-sm border-t border-surface-container flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">lock_clock</span>
+<span class="">Takes &lt; 120 seconds</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-headline-md text-headline-md font-bold text-primary-container">02</span>
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-surface-container-low text-primary">
+<span class="material-symbols-outlined text-[26px]">qr_code_scanner</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-space-xs">
+                Get your scannable QR/NFC ID
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Access via smartphone lock screen, physical card, or wearable band. Always ready, even if the device is uncharged or offline.
+              </p>
+<div class="mt-space-lg pt-space-sm border-t border-surface-container flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">contactless</span>
+<span class="">Universal NFC &amp; Offline QR</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-headline-md text-headline-md font-bold text-primary-container">03</span>
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-surface-container-low text-primary">
+<span class="material-symbols-outlined text-[26px]">medical_services</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-space-xs">
+                Instant, accurate context
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                One scan at any participating hospital gives doctors instant, accurate context before the gurney even reaches the trauma bay.
+              </p>
+<div class="mt-space-lg pt-space-sm border-t border-surface-container flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">bolt</span>
+<span class="">&lt; 300ms EHR sync latency</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SERVICES / WHO IT'S FOR (Continuum of Care) -->
+<section id="services" class="w-full bg-surface-container-low py-space-2xl px-grid-margin">
+<div class="mx-auto max-w-7xl">
+<div class="flex flex-col items-center text-center mb-space-2xl">
+<span class="font-label-sm text-label-sm font-semibold tracking-wider text-secondary uppercase mb-space-2xs">Ecosystem Alignment</span>
+<h2 class="font-headline-xl text-headline-xl font-bold text-primary">Designed for the entire emergency care continuum.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-xs">
+              Built to align patients, clinicians, and administrative infrastructure without workflow disruption.
+            </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-grid-gutter">
+<!-- Card 1: Patients -->
+<div class="flex flex-col justify-between rounded-2xl bg-surface-container-lowest p-space-xl shadow-sm hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[28px]">person</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-primary">Patients</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Pre-register once, be known everywhere. Ensure your life-saving medical data speaks for you when you cannot.
+                </p>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-surface-container flex flex-col gap-space-2xs">
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span class="">100% data consent control</span>
+</div>
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span class="">Automatic SOS alerts to family</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Doctors -->
+<div class="flex flex-col justify-between rounded-2xl bg-surface-container-lowest p-space-xl shadow-sm hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[28px]">cardiology</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-primary">Doctors</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Treat strangers with confidence. Instant access to verified allergies, medications, and chronic conditions in critical golden hours.
+                </p>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-surface-container flex flex-col gap-space-2xs">
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span class="">Critical contraindication warnings</span>
+</div>
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span class="">Sub-second biometric identification</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Hospitals & Admins -->
+<div class="flex flex-col justify-between rounded-2xl bg-surface-container-lowest p-space-xl shadow-sm hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[28px]">domain</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-primary">Hospitals &amp; Admins</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Run beds, staff, ICU, and pharmacy on one live data backbone. Eliminate manual intake bottlenecks and expedite triage.
+                </p>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-surface-container flex flex-col gap-space-2xs">
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span class="">Seamless HL7 / FHIR integration</span>
+</div>
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+<span class="">Zero intake desk administrative drag</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TRUST & IMPACT STRIP -->
+<section class="w-full bg-surface py-space-2xl px-grid-margin border-y border-surface-container">
+<div class="mx-auto max-w-7xl">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter divide-y md:divide-y-0 md:divide-x divide-surface-container">
+<!-- Impact 1 -->
+<div class="flex flex-col items-center md:items-start text-center md:text-left py-space-md md:py-0 md:pr-space-lg">
+<span class="font-headline-xl text-headline-xl font-bold text-primary mb-space-2xs">Scan once.</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Instant biometric or QR verification compatible with ambulance handhelds and hospital triage kiosks.
+              </p>
+</div>
+<!-- Impact 2 -->
+<div class="flex flex-col items-center md:items-start text-center md:text-left py-space-md md:py-0 md:px-space-lg">
+<span class="font-headline-xl text-headline-xl font-bold text-secondary mb-space-2xs">Save minutes.</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Up to 90% reduction in emergency intake latency, giving trauma physicians immediate life-critical context.
+              </p>
+</div>
+<!-- Impact 3 -->
+<div class="flex flex-col items-center md:items-start text-center md:text-left py-space-md md:py-0 md:pl-space-lg">
+<span class="font-headline-xl text-headline-xl font-bold text-primary mb-space-2xs">Save lives.</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Zero miscommunicated drug interactions during high-pressure trauma resuscitation and surgical prep.
+              </p>
+</div>
+</div>
+</div>
+</section>
+<!-- CLINICAL COMPLIANCE & PROTOCOLS -->
+<section class="w-full bg-surface-container-lowest py-space-lg px-grid-margin">
+<div class="mx-auto max-w-7xl flex flex-wrap items-center justify-between gap-space-md text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified_user</span>
+<div>
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Universal Triage Standard</h4>
+<p class="font-body-sm text-body-sm">Conforms to Manchester Triage System &amp; Emergency Severity Index (ESI)</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-md font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-secondary"></span>ISO 27001 Security</span>
+<span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-secondary"></span>HIPAA &amp; ABDM Ready</span>
+<span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-secondary"></span>256-Bit Hardware Encryption</span>
+</div>
+</div>
+</section>
+<!-- FINAL CALL TO ACTION / HELP & SUPPORT -->
+<section id="help-support" class="w-full bg-surface py-space-2xl px-grid-margin">
+<div class="mx-auto max-w-5xl rounded-3xl bg-surface-container p-space-xl lg:p-space-2xl text-center shadow-sm">
+<div class="mx-auto max-w-2xl flex flex-col items-center gap-space-md">
+<div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[32px]">health_and_safety</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl font-bold text-primary tracking-tight">
+              Your medical history, ready before you are.
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+              Equip paramedics and trauma teams with the critical details that matter most. Setup takes less than two minutes.
+            </p>
+<div class="flex flex-col sm:flex-row items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center rounded-lg bg-primary px-space-xl py-space-sm font-label-lg text-label-lg text-on-primary shadow-sm hover:bg-primary-container transition-all" data-path="get-health-id" href="#registration-card" onclick="scrollToRegistration(event)">
+<span class="material-symbols-outlined mr-2 text-[20px]">add_moderator</span>
+                Create Your Digital Health ID
+              </a>
+<a class="inline-flex items-center font-label-lg text-label-lg text-primary hover:text-secondary transition-colors group" data-path="contact" href="#">
+                Schedule a hospital pilot demo
+                <span class="material-symbols-outlined ml-1 text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+              Available nationwide across all participating emergency grids and public trauma networks.
+            </p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- FOOTER -->
+<footer class="w-full bg-surface-container-lowest shadow-[0_-1px_6px_rgba(0,0,0,0.02)] mt-space-2xl">
+<div class="w-full px-grid-margin py-space-2xl">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-grid-gutter mb-space-2xl">
+<div class="lg:col-span-2 flex flex-col gap-space-sm pr-space-lg">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">E-KAVACH</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Next-generation emergency-first clinical operating system connecting triage, trauma infrastructure, and critical diagnostics in real-time.</p>
+<div class="flex items-center gap-space-xs mt-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ISO 27799 &amp; ABDM Compliant Mission-Critical Infrastructure</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm">
+<h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold">Platform</h3>
+<ul class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant">
+<li class=""><a class="hover:text-primary transition-colors" data-path="how-it-works" href="#">Architecture</a></li>
+<li class=""><a class="hover:text-primary transition-colors" data-path="for-hospitals" href="#">Emergency Triage OS</a></li>
+<li class=""><a class="hover:text-primary transition-colors" data-path="for-doctors" href="#">Doctor Console</a></li>
+<li class=""><a class="hover:text-primary transition-colors" data-path="get-health-id" href="#registration-card" onclick="scrollToRegistration(event)">Health ID Gateway</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-space-sm">
+<h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold">Legal &amp; Safety</h3>
+<ul class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant">
+<li class=""><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a></li>
+<li class=""><a class="hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Service</a></li>
+<li class=""><a class="hover:text-primary transition-colors" data-path="clinical-compliance" href="#">Clinical Compliance</a></li>
+<li class=""><a class="hover:text-primary transition-colors" data-path="security-protocols" href="#">Security Protocols</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-space-sm">
+<h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold">Emergency Ops</h3>
+<ul class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant">
+<li class=""><a class="hover:text-primary transition-colors" data-path="contact" href="#">Command Center Helpline</a></li>
+<li class=""><a class="hover:text-primary transition-colors" data-path="contact" href="#">Hospital Integration Desk</a></li>
+<li class=""><a class="hover:text-primary transition-colors" data-path="contact" href="#">Media &amp; Press</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md bg-surface-container-low px-space-lg py-space-md rounded-xl">
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 E-KAVACH Health Systems Inc. All rights reserved.</p>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span>Active Trauma Grid Status: Operational</span>
+</div>
+</div>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+</body></html>

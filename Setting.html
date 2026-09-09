@@ -1,0 +1,385 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "primary-fixed-dim": "#96cdf2",
+        "on-secondary-fixed": "#001f25",
+        "outline-variant": "#c0c7ce",
+        "surface-bright": "#f8f9fd",
+        "on-primary-container": "#85bde1",
+        "on-secondary-fixed-variant": "#004e59",
+        "error-container": "#ffdad6",
+        "on-tertiary-fixed": "#00201b",
+        "on-error": "#ffffff",
+        "surface-variant": "#e1e2e6",
+        "surface-tint": "#286484",
+        "tertiary-container": "#006c60",
+        "on-secondary": "#ffffff",
+        "surface-container-highest": "#e0e3e6",
+        "secondary-fixed-dim": "#77d4e5",
+        "on-surface-variant": "#41484d",
+        "outline": "#70787f",
+        "tertiary-fixed-dim": "#59dbc7",
+        "secondary-container": "#9fecfc",
+        "on-primary-fixed-variant": "#004c6b",
+        "on-error-container": "#93000a",
+        "primary-fixed": "#c6e7ff",
+        "on-background": "#191c1f",
+        "on-primary": "#ffffff",
+        "tertiary-fixed": "#adefe1",
+        "secondary-fixed": "#a2efff",
+        "on-surface": "#191c1f",
+        "inverse-on-surface": "#eff1f5",
+        "surface-dim": "#d8dade",
+        "on-primary-fixed": "#001e2d",
+        "surface-container": "#eceef2",
+        "surface": "#f7f9fd",
+        "on-tertiary-fixed-variant": "#005047",
+        "on-secondary-container": "#0d6d7b",
+        "surface-container-high": "#e7e8ec",
+        "inverse-primary": "#96cdf2",
+        "surface-container-low": "#f2f4f7",
+        "error": "#ba1a1a",
+        "primary": "#00354c",
+        "primary-container": "#004d6c",
+        "on-tertiary-container": "#81c2b5",
+        "inverse-surface": "#2d3134",
+        "surface-container-lowest": "#ffffff",
+        "on-tertiary": "#ffffff",
+        "secondary": "#006876",
+        "tertiary": "#003831",
+        "background": "#f8f9fd"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-md": "1rem",
+        "space-lg": "1.5rem",
+        "grid-margin": "2rem",
+        "space-2xl": "3rem",
+        "space-2xs": "0.25rem",
+        "grid-gutter": "1.5rem",
+        "space-sm": "0.75rem",
+        "space-xs": "0.5rem",
+        "space-xl": "2rem"
+      },
+      "fontFamily": {
+        "body-lg": ["Inter"],
+        "headline-md": ["Space Grotesk"],
+        "headline-xl": ["Space Grotesk"],
+        "body-md": ["Inter"],
+        "body-sm": ["Inter"],
+        "headline-sm": ["Space Grotesk"],
+        "headline-lg": ["Space Grotesk"],
+        "label-lg": ["Inter"],
+        "headline-xl-mobile": ["Space Grotesk"],
+        "label-md": ["Inter"],
+        "label-sm": ["Inter"]
+      },
+      "fontSize": {
+        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+        "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+        "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+        "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "500"}],
+        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+        "headline-xl-mobile": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+        "label-sm": ["10px", {"lineHeight": "14px", "fontWeight": "500"}]
+      }
+    }
+  }
+};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)] overflow-y-auto"><div class="p-space-lg flex flex-col gap-space-sm bg-surface-container-low/60"><div class="flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Logo.jpg" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcgTicmp8fdjaSXDm0Ml1cFZ245POCUpYNvZhcTCQIJH5yXXf6nBsV6J50qM2uwbRgMqiSQ2eTjql84bc1Ix55TeF7fJU9baYHSZ7ZCtC4XRvneiY9I5T2wdhQr973oNU3CDLLevDidADHJCdQR9SewdR5uEy73d2Z2TVwokdYZWbsxwaDX77ZMfyf577MVgs3s1KUrXgciDZGCAq5NQFyJDQatLJwCr34o6AKechoHyaVsUrkPT9nicm-8N7AHDl6jlo6r8WLEjNJoOg"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">E-KAVACH</span></div><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span></div><div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-[14px] text-secondary">verified_user</span><span class="">NDHM Verified Network</span></div></div><div class="p-space-md mx-space-sm mt-space-sm rounded-xl bg-surface-container flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0 text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">person</span></div><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface truncate">Rajesh V. Sharma</span><span class="font-body-sm text-body-sm text-on-surface-variant font-mono truncate">ABHA-9824-8819-TN</span></div></div><div class="mt-space-2xs flex items-center gap-space-xs px-space-xs py-space-2xs rounded-full bg-surface-container-high w-fit"><span class="material-symbols-outlined text-[14px] text-primary">verified</span><span class="font-label-sm text-label-sm text-on-surface font-medium">Verified Health ID</span></div></div><nav class="flex-1 px-space-sm py-space-md flex flex-col gap-space-2xs" data-active-classes="bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-all" data-path="my-health-id" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="">My Health ID</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-all" data-path="appointments" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span class="">Appointments</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-all" data-path="hospital-er-access" href="#"><span class="material-symbols-outlined text-[20px]">emergency</span><span class="">Hospital ER Access</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-all" data-path="prescriptions-history" href="#"><span class="material-symbols-outlined text-[20px]">prescriptions</span><span class="">Prescriptions &amp; History</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-all" data-path="government-schemes" href="#"><span class="material-symbols-outlined text-[20px]">policy</span><span class="">Government Schemes</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-all" data-path="messages-consults" href="#"><span class="material-symbols-outlined text-[20px]">forum</span><span class="">Messages / Consults</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="">Settings</span></a></nav><div class="p-space-md mt-auto"><button class="w-full flex items-center justify-center gap-space-xs bg-error text-on-error py-space-sm px-space-md rounded-lg font-label-lg text-label-lg shadow-sm hover:opacity-95 transition-opacity" type="button"><span class="material-symbols-outlined text-[20px]">e911_emergency</span><span class="">EMERGENCY SOS</span></button></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">National Digital Health System</span><span class="px-space-xs py-space-2xs bg-surface-container text-on-surface font-label-sm text-label-sm rounded-full">Ayushman Bharat Portal</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-space-2xs bg-surface-container-low rounded-lg text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">search</span><input class="bg-transparent border-none outline-none font-body-sm text-body-sm w-64 text-on-surface placeholder:text-outline" placeholder="Search health records, diagnostics..." type="text"></div><button class="p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button class="p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">help</span></button><div class="h-6 w-[1px] bg-surface-container-highest"></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 min-h-screen bg-surface px-space-xl py-space-lg"><div class="flex flex-col w-full">
+<!-- Interactive Script for Tab Switching and State -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Synchronize Sidebar active link state to Settings
+      const navLinks = document.querySelectorAll('aside nav a');
+      navLinks.forEach(link => {
+        if (link.getAttribute('data-path') === 'settings') {
+          link.className = 'flex items-center gap-space-sm px-space-md py-space-xs bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm transition-all';
+        } else {
+          link.className = 'flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-all';
+        }
+      });
+
+      // Mini-Nav Tab Navigation
+      const tabBtns = document.querySelectorAll('.settings-nav-btn');
+      const tabPanels = document.querySelectorAll('.settings-section-panel');
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = btn.getAttribute('data-tab-target');
+
+          tabBtns.forEach(b => {
+            b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+            b.classList.add('text-on-surface-variant', 'hover:bg-surface-container');
+            const dot = b.querySelector('.nav-active-dot');
+            if (dot) dot.classList.add('opacity-0');
+          });
+
+          btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+          btn.classList.remove('text-on-surface-variant', 'hover:bg-surface-container');
+          const activeDot = btn.querySelector('.nav-active-dot');
+          if (activeDot) activeDot.classList.remove('opacity-0');
+
+          if (target === 'all') {
+            tabPanels.forEach(panel => panel.classList.remove('hidden'));
+          } else {
+            tabPanels.forEach(panel => {
+              if (panel.id === target || target === 'profile') {
+                panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            });
+          }
+        });
+      });
+
+      // Toggle Switches
+      const toggles = document.querySelectorAll('.interactive-toggle');
+      toggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          const thumb = toggle.querySelector('.toggle-thumb');
+          const isChecked = toggle.getAttribute('data-checked') === 'true';
+          if (isChecked) {
+            toggle.setAttribute('data-checked', 'false');
+            toggle.classList.remove('bg-secondary');
+            toggle.classList.add('bg-surface-container-highest');
+            thumb.classList.remove('translate-x-5');
+            thumb.classList.add('translate-x-0');
+          } else {
+            toggle.setAttribute('data-checked', 'true');
+            toggle.classList.remove('bg-surface-container-highest');
+            toggle.classList.add('bg-secondary');
+            thumb.classList.remove('translate-x-0');
+            thumb.classList.add('translate-x-5');
+          }
+        });
+      });
+
+      // Feedback toast on Save
+      const saveBtn = document.getElementById('save-all-btn');
+      const toast = document.getElementById('save-toast');
+      if (saveBtn && toast) {
+        saveBtn.addEventListener('click', () => {
+          toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+          toast.classList.add('opacity-100', 'translate-y-0');
+          setTimeout(() => {
+            toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+            toast.classList.remove('opacity-100', 'translate-y-0');
+          }, 3200);
+        });
+      }
+    });
+  </script>
+<!-- Notification Toast (Fixed Minimal Feedback) -->
+<div class="fixed bottom-6 right-6 z-50 flex items-center gap-space-sm bg-primary text-on-primary px-space-lg py-space-sm rounded-xl shadow-xl transition-all duration-300 opacity-0 pointer-events-none translate-y-2" id="save-toast">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed">check_circle</span>
+<span class="font-label-md text-label-md">Configuration synced with NDHM Cloud repository</span>
+</div>
+<!-- Page Header Area -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-xl">
+<div>
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Citizen Control Hub</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">NDHM Specification 2.4</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Settings</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">Manage your profile, verified health ID, and clinical sharing preferences.</p>
+</div>
+<!-- Header Action Controls -->
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<!-- Sync Status Pill (Teal / No Red) -->
+<div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-tertiary-container/15 text-tertiary shadow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-label-md text-label-md font-medium text-secondary">ABDM Cloud Sync: Active</span>
+</div>
+<!-- Quick Save All Button -->
+<button class="flex items-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary px-space-lg py-space-xs rounded-lg shadow-sm transition-all duration-150 active:scale-95" id="save-all-btn">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span class="font-label-lg text-label-lg">Save All Preferences</span>
+</button>
+</div>
+</div>
+<!-- Master Layout: Mini Navigation + Dynamic Settings Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT MINI-NAVIGATION (240px equivalent ~ col-span-3 or 4) -->
+<div class="lg:col-span-3 flex flex-col gap-space-lg sticky top-24">
+<nav class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col gap-space-2xs">
+<button class="settings-nav-btn w-full flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg transition-all text-left text-on-surface-variant hover:bg-surface-container" data-tab-target="sec-profile">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+<span class="truncate">Profile</span>
+</div>
+<span class="nav-active-dot w-1.5 h-1.5 rounded-full bg-tertiary-fixed transition-opacity opacity-0"></span>
+</button>
+<button class="settings-nav-btn w-full flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container font-label-lg text-label-lg transition-all text-left" data-tab-target="sec-abha"><div class="flex items-center gap-space-sm min-w-0"><span class="material-symbols-outlined text-[20px]">credit_card</span><span class="truncate">Health ID &amp; ABHA</span></div><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary" title="Verified ID"></span><span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span></div></button>
+<button class="settings-nav-btn w-full flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container font-label-lg text-label-lg transition-all text-left" data-tab-target="sec-emergency">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[20px]">contact_phone</span>
+<span class="truncate">Emergency Contacts</span>
+</div>
+<span class="px-space-2xs py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">2</span>
+</button>
+<button class="settings-nav-btn w-full flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container font-label-lg text-label-lg transition-all text-left" data-tab-target="sec-notifications">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+<span class="truncate">Notifications</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-secondary">toggle_on</span>
+</button>
+
+
+
+</nav>
+<!-- Trust Card: ABDM & ISO 27799 Compliance -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm shadow-sm relative overflow-hidden">
+<div class="flex items-center gap-space-sm text-secondary">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Data Fortress</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Protected under Ayushman Bharat Digital Mission (ABDM) guidelines &amp; ISO 27799 Health Informatics standard.
+        </p>
+<div class="flex items-center gap-space-2xs pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">enhanced_encryption</span>
+<span class="">256-Bit Hardware Keystore</span>
+</div>
+</div>
+</div>
+<!-- RIGHT MAIN SETTINGS CANVAS (lg:col-span-9) -->
+<div class="lg:col-span-9 flex flex-col gap-space-xl">
+<!-- SECTION 1: PROFILE INFORMATION -->
+<section class="settings-section-panel bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-lg" id="sec-profile">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-md border-b-0 gap-space-md">
+<div class="flex items-center gap-space-md">
+<!-- Patient Headshot placeholder / Avatar -->
+<div class="relative group">
+<div class="w-20 h-20 rounded-full overflow-hidden bg-primary-fixed flex items-center justify-center shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Professional studio portrait of an Indian gentleman in his early 40s wearing a high-collared navy blue linen shirt, subtle calm lighting, neutral minimalist background, representing clean medical ID photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2RcO3rBZBvVx-GngsqE7ARjIBRqkNdebJOIx8ijl1ckhwsyO_Me70YVoE1txPN1Vjw_z4EspT0PRvpguKIvdKP72va8yF0LB_1mxfXnPMi1ga3q_dnFv7OYfHhM-MSidiXZCzZAcBTvPC91D6ccUPbHzs21U5jFoj7sliX3y5_tAwcfSVuJNkyzVejOmlCbbfo0U72ABTe1txm8Ou2ISgDqJv8lK5F5SSW_eYVROjDvypIo7PLvWq9A">
+</div>
+<button class="absolute -bottom-1 -right-1 bg-surface-container-lowest text-primary hover:text-secondary rounded-full p-1.5 shadow-md flex items-center justify-center transition-transform hover:scale-105" title="Upload new photo">
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+</button>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface">Rajesh V. Sharma</h2>
+<span class="material-symbols-outlined text-secondary text-[20px]" title="Authenticated Patient">check_circle</span>
+</div>
+<div class="flex items-center gap-space-sm mt-0.5">
+<span class="font-label-md text-label-md px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-medium">ABDM Tier-1 Citizen Account</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Last synced: 14 mins ago</span>
+</div>
+</div>
+</div>
+<button class="self-start md:self-center px-space-md py-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md transition-colors flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">cloud_upload</span>
+<span class="">Change Photo</span>
+</button>
+</div>
+<!-- Editable Form Grid -->
+<form class="grid grid-cols-1 md:grid-cols-2 gap-space-lg" onsubmit="event.preventDefault();">
+<!-- Full Name -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-medium">Full Name (As per Aadhaar)</label>
+<div class="relative flex items-center">
+<input class="w-full h-11 px-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" type="text" value="Rajesh V. Sharma">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] absolute right-3 pointer-events-none">person</span>
+</div>
+</div>
+<!-- Date of Birth -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-medium">Date of Birth</label>
+<div class="relative flex items-center">
+<input class="w-full h-11 px-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" type="text" value="14 April 1982">
+<span class="font-label-sm text-label-sm text-on-surface-variant absolute right-3 px-space-xs py-0.5 rounded bg-surface-container">44 Yrs</span>
+</div>
+</div>
+<!-- Contact Number -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-medium">Verified Phone Number</label>
+<div class="relative flex items-center">
+<input class="w-full h-11 px-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" type="tel" value="+91 98401 22819">
+<div class="absolute right-3 flex items-center gap-1 text-secondary font-label-sm text-label-sm bg-secondary-container/30 px-space-xs py-0.5 rounded">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span class="">OTP Verified</span>
+</div>
+</div>
+</div>
+<!-- Email Address -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-medium">Official Digital Health Email</label>
+<div class="relative flex items-center">
+<input class="w-full h-11 px-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" type="email" value="rajesh.sharma@kavach.abdm.in">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] absolute right-3 pointer-events-none">mail</span>
+</div>
+</div>
+<!-- Residential Address -->
+<div class="md:col-span-2 flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-medium">Residential Registered Address</label>
+<input class="w-full h-11 px-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" type="text" value="Flat 4B, Shanthi Niketan, Greams Road, Chennai, TN 600006">
+</div>
+<!-- Preferred Language & Timezone -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-medium">Preferred Interface &amp; Prescription Language</label>
+<div class="relative">
+<select class="w-full h-11 px-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary appearance-none shadow-sm cursor-pointer">
+<option selected="">English (UK / India)</option>
+<option>Tamil (தமிழ்)</option>
+<option>Hindi (हिन्दी)</option>
+<option>Telugu (తెలుగు)</option>
+</select>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] absolute right-3 top-3 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-md text-label-md text-on-surface font-medium">National Residency Zone</label>
+<input class="w-full h-11 px-space-md rounded-lg bg-surface-container text-on-surface-variant font-body-md text-body-md shadow-sm cursor-not-allowed" disabled="" type="text" value="Southern Zone (Tamil Nadu / UT Puducherry)">
+</div>
+<!-- Submit Buttons -->
+<div class="md:col-span-2 flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-lg py-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors" type="button">Discard</button>
+<button class="flex items-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary px-space-xl py-space-sm rounded-lg font-label-lg text-label-lg shadow-sm transition-all duration-150 active:scale-95" type="submit">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span class="">Save Changes</span>
+</button>
+</div>
+</form>
+</section>
+<!-- SECTION 2: HEALTH ID & ABHA LINKING PANEL -->
+
+<!-- SECTION 3: EMERGENCY CONTACTS MODULE -->
+
+<!-- SECTION 4: NOTIFICATIONS & PRIVACY TOGGLES -->
+
+<!-- SECTION 5: PRIVACY & SECURITY DETAILS -->
+
+<!-- SECTION 6: CONNECTED DEVICES -->
+
+<!-- SECTION 7: ACCOUNT AUDIT & SAFE GUARDS -->
+
+</div>
+</div>
+</div></main></div>
+
+
+
+
+
+
+
+</body></html>

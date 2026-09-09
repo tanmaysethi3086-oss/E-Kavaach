@@ -1,0 +1,455 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><title>E-KAVACH Patient Portal</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#f2f3f8", "secondary-container": "#9fecfc", "on-error-container": "#93000a", "surface-dim": "#d8dade", "tertiary-fixed-dim": "#91d3c6", "secondary-fixed-dim": "#85d2e2", "inverse-surface": "#2d3134", "surface-container-high": "#e7e8ec", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#005047", "surface-container": "#eceef1", "on-surface": "#191c1f", "surface-variant": "#e0e3e6", "on-background": "#191c1f", "surface-container-highest": "#e0e3e6", "on-secondary-fixed-variant": "#004e59", "primary-fixed-dim": "#96cdf2", "primary-fixed": "#c6e7ff", "tertiary": "#003831", "error": "#ba1a1a", "on-primary": "#ffffff", "on-surface-variant": "#40484e", "surface-tint": "#286484", "on-primary-container": "#b2e0ff", "surface-bright": "#f7f9fd", "inverse-primary": "#88cffb", "on-primary-fixed": "#001e2d", "primary": "#00354c", "on-secondary-fixed": "#001f24", "tertiary-fixed": "#adefe1", "tertiary-container": "#006c60", "secondary-fixed": "#a2efff", "background": "#f8f9fd", "on-primary-fixed-variant": "#004c6b", "primary-container": "#05668d", "on-error": "#ffffff", "outline-variant": "#bfc7cf", "on-tertiary-container": "#70efdb", "outline": "#70787f", "inverse-on-surface": "#eff1f5", "on-secondary": "#ffffff", "on-tertiary-fixed": "#00201c", "surface": "#f7f9fd", "on-secondary-container": "#006d7b", "surface-container-lowest": "#ffffff", "secondary": "#006876" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "grid-gutter": "1.5rem", "space-sm": "0.75rem", "space-xs": "0.5rem", "space-lg": "1.5rem", "space-2xs": "0.25rem", "grid-margin": "2rem", "space-md": "1rem", "space-xl": "2rem", "space-2xl": "3rem" }, "fontFamily": { "label-lg": [ "Inter" ], "headline-xl-mobile": [ "Space Grotesk" ], "label-sm": [ "Inter" ], "headline-sm": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "headline-md": [ "Space Grotesk" ], "label-md": [ "Inter" ], "body-lg": [ "Inter" ], "body-sm": [ "Inter" ], "headline-xl": [ "Space Grotesk" ], "body-md": [ "Inter" ] }, "fontSize": { "label-lg": [ "14px", { "lineHeight": "20px", "fontWeight": "500" } ], "headline-xl-mobile": [ "30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "label-sm": [ "10px", { "lineHeight": "14px", "fontWeight": "500" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "fontWeight": "500" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "fontWeight": "500" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "headline-xl": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="Logo.jpg" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDAVhxanoNhpnFrK_UG0HPlA9WPaeEwumHZF0U3Ep7fvQf-Tlai7T3Lp7y3J6GhvY89yNXxP8_nOhZIOk2CW2Y-ooRhxieHwW9RD2TOAZPpyw8Ot4SFvhu2swJnVekO7ZpTcbE5dN_qON6YC-UaJcGfwQ8OiXBPxnKYn3LUMo0sYWjjOFVgo_L0PIfgRABd0gCcNs__LCvvMO9kIF65W8d33P9KCgSgLy9xRGQO-yI_2zTGQPg9UqyHG7tzY__G5Ob1j74bTDKrabU1SQ"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold text-primary tracking-tight">E-KAVACH</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">National Health Portal</span></div></div><div class="px-space-md py-space-sm"><div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-2xs"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm font-semibold text-sm shadow-sm">KM</div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-lg text-label-lg font-semibold text-on-surface truncate">Dr. Kavitha Menon</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Chief Interventional Cardio</span></div></div><div class="mt-space-2xs flex flex-col gap-1 pt-space-2xs"><span class="font-label-sm text-label-sm text-secondary font-medium truncate">Apollo Greams Trauma Hub</span><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm font-mono text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">NMC: MD-44912-TN</span><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span><span class="">Verified</span></span></div></div></div></div><nav class="flex-1 px-space-md py-space-2xs space-y-1" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="scan-qr" href="#"><span class="material-symbols-outlined text-[20px]">qr_code_scanner</span><span class="">Scan Patient QR</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="my-doctor-id" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="">My Doctor ID</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="appointments" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span class="">Appointments</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="patients" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span class="">Patients</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="doctor-network" href="#"><span class="material-symbols-outlined text-[20px]">share</span><span class="">Doctor Network</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg transition-colors bg-primary text-on-primary font-semibold shadow-sm" data-path="messages-consults" href="#"><span class="material-symbols-outlined text-[20px]">forum</span><span class="">Messages / Consults</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="">Settings</span></a></nav></div><div class="p-space-md bg-surface-container-lowest"><div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1"><div class="flex items-center justify-between"><span class="font-label-sm text-[10px] uppercase font-bold text-on-surface-variant tracking-wider">Node Active</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span></div><span class="font-label-sm text-label-sm font-semibold text-on-surface truncate">Apollo Trauma Node 09: Connected</span><div class="flex items-center justify-between text-on-surface-variant font-label-sm text-[11px] font-mono"><span class="">0.12s ping • 99.98% sync</span><span class="">Port #842</span></div></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md flex-1 max-w-lg"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full pl-10 pr-space-md py-2 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container transition-all" placeholder="Search records, doctors, prescriptions, ABHA ID..." type="text"></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-2 px-space-sm py-1 rounded-full bg-secondary-container/40 text-secondary font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="">Secure Shield: Active</span></div><button aria-label="Notifications" class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex items-center justify-center transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-background flex-1 px-space-xl py-space-lg"><div class="flex flex-col w-full h-[calc(100vh-5.5rem)]">
+<!-- Top Level Sub-Header Bar (Trauma OS Status & Patient Filter Tracker) -->
+<div class="flex flex-wrap items-center justify-between pb-space-sm gap-y-2">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-2 px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide uppercase">Trauma OS v4.2 • Greams Trauma Hub</span>
+</div>
+<span class="text-on-surface-variant font-label-sm text-label-sm tracking-wider">CHIEF CARDIOLOGY WORKSPACE</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="hidden xl:flex items-center gap-2 px-space-sm py-1 rounded-lg bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span class="">ABDM Digital Health Grid: Synchronized (18ms)</span>
+</div>
+<button class="flex items-center gap-1.5 px-space-sm py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span class="">Refresh Feed</span>
+</button>
+</div>
+</div>
+<!-- Master-Detail 2-Column Clinical Workspace Container -->
+<div class="grid grid-cols-12 gap-space-md flex-1 min-h-0">
+<!-- LEFT COLUMN: Patient Conversations Directory -->
+<section class="col-span-12 lg:col-span-4 xl:col-span-3 flex flex-col bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden min-h-0">
+<!-- Master List Header & Filter Tabs -->
+<div class="p-space-md bg-surface-container-lowest flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Consultations</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">12</span>
+</div>
+<button aria-label="Compose new directive" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit_square</span>
+</button>
+</div>
+<!-- Filter Segment Chips -->
+<div class="flex items-center gap-1.5 overflow-x-auto py-1 text-nowrap">
+<button class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-medium transition-all shadow-sm">All (12)</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm transition-all flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Active (3)
+          </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm transition-all">Unread (4)</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm transition-all">Post-Op</button>
+</div>
+</div>
+<!-- Conversations Scrollable Feed -->
+<div class="flex-1 overflow-y-auto divide-y divide-surface-container">
+<!-- Active Item: Rajesh V. Sharma -->
+<article class="p-space-sm bg-surface-container-low/70 relative cursor-pointer transition-colors flex items-start gap-space-xs">
+<!-- Active Marker Indicator Strip -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary rounded-r"></div>
+<div class="relative flex-shrink-0 ml-1">
+<div class="w-11 h-11 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-sm font-semibold shadow-sm">
+              RS
+            </div>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary-fixed-dim ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">Rajesh V. Sharma</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">09:05 AM</span>
+</div>
+<div class="font-label-sm text-label-sm font-mono text-on-surface-variant truncate">ABHA-9824-8819-TN</div>
+<p class="font-body-sm text-body-sm text-on-surface line-clamp-1 mt-0.5 font-medium">Understood Doctor. Will adhere to the dosage. Should we...</p>
+<div class="mt-1.5 flex items-center gap-1.5 flex-wrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+                Active Consult
+              </span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">LAD Stent D-14</span>
+</div>
+</div>
+</article>
+<!-- Patient 2: Meenakshi Sunder -->
+<article class="p-space-sm hover:bg-surface-container-low/50 cursor-pointer transition-colors flex items-start gap-space-xs">
+<div class="relative flex-shrink-0 ml-1">
+<div class="w-11 h-11 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-headline-sm font-semibold">
+              MS
+            </div>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-outline-variant ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface truncate">Meenakshi Sunder</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Yesterday</span>
+</div>
+<div class="font-label-sm text-label-sm font-mono text-on-surface-variant truncate">ABHA-1102-4491-TN</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">INR level returned at 2.4. Continuing Warfarin 4mg as...</p>
+<div class="mt-1.5 flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">Warfarin Protocol</span>
+</div>
+</div>
+</article>
+<!-- Patient 3: Anandhan Krishnan (Unread Alert) -->
+<article class="p-space-sm hover:bg-surface-container-low/50 cursor-pointer transition-colors flex items-start gap-space-xs">
+<div class="relative flex-shrink-0 ml-1">
+<div class="w-11 h-11 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-headline-sm font-semibold">
+              AK
+            </div>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary-fixed-dim ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">Anandhan Krishnan</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Yesterday</span>
+</div>
+<div class="font-label-sm text-label-sm font-mono text-on-surface-variant truncate">ABHA-7741-2093-TN</div>
+<p class="font-body-sm text-body-sm text-on-surface font-semibold line-clamp-1 mt-0.5">Uploaded Holter Monitor report 48-hr trace summary.</p>
+<div class="mt-1.5 flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">Post-Angio Followup</span>
+<span class="w-4 h-4 rounded-full bg-primary text-on-primary font-label-sm text-[10px] flex items-center justify-center font-bold">1</span>
+</div>
+</div>
+</article>
+<!-- Patient 4: Divya Balachandar -->
+<article class="p-space-sm hover:bg-surface-container-low/50 cursor-pointer transition-colors flex items-start gap-space-xs">
+<div class="relative flex-shrink-0 ml-1">
+<div class="w-11 h-11 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-headline-sm font-semibold">
+              DB
+            </div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-lg text-label-lg font-medium text-on-surface truncate">Divya Balachandar</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Oct 21</span>
+</div>
+<div class="font-label-sm text-label-sm font-mono text-on-surface-variant truncate">ABHA-5529-6102-TN</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">Discharge summary signed and sent to primary caregiver.</p>
+<div class="mt-1.5">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">Closed Triage</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- RIGHT MAIN COLUMN: Clinical Detail Workspace -->
+<main class="col-span-12 lg:col-span-8 xl:col-span-9 flex flex-col bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden min-h-0">
+<!-- 1. Detail Chat Header -->
+<header class="p-space-md bg-surface-container-lowest flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative flex-shrink-0">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-md font-bold ring-2 ring-secondary">
+              RS
+            </div>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-tertiary-fixed-dim ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<h1 class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">Rajesh V. Sharma</h1>
+<span class="font-label-sm text-label-sm font-mono text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">ABHA-9824-8819-TN</span>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                Active Consult
+              </span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant mt-0.5">
+              Apollo Greams Trauma Hub • Cardiology Bed Ward 4B • Attending: Dr. Kavitha Menon
+            </span>
+</div>
+</div>
+<!-- Top-Right Action Cluster -->
+<div class="flex items-center gap-space-xs">
+<!-- ABDM Teleconsult Video Button -->
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg bg-primary text-on-primary hover:bg-primary/90 font-label-md text-label-md font-semibold transition-all shadow-sm" title="Start ABDM Teleconsult" type="button">
+<span class="material-symbols-outlined text-[18px]">videocam</span>
+<span class="hidden sm:inline">Start ABDM Teleconsult</span>
+</button>
+<!-- View EHR Chart Button -->
+<button class="flex items-center gap-1.5 px-space-sm py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md font-semibold transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">clinical_notes</span>
+<span class="hidden md:inline">View Full Chart</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+<!-- Overflow Dropdown Menu Trigger -->
+<div class="relative" id="action-dropdown-container">
+<button aria-label="More options" class="w-9 h-9 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex items-center justify-center transition-colors" id="overflow-menu-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+<!-- Context Menu Flyout (Managed via vanilla JS) -->
+<div class="hidden absolute right-0 mt-2 w-52 bg-surface-container-lowest rounded-xl shadow-xl p-1 z-50" id="overflow-dropdown-menu">
+<a class="flex items-center gap-2 px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px] text-secondary">post_add</span>
+<span class="">Add Clinical Note</span>
+</a>
+<a class="flex items-center gap-2 px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary">swap_horiz</span>
+<span class="">Transfer Trauma Bay</span>
+</a>
+<div class="my-1 h-px bg-surface-container"></div>
+<a class="flex items-center gap-2 px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">lock</span>
+<span class="">End Consult Session</span>
+</a>
+</div>
+</div>
+</div>
+</header>
+<!-- 2. Patient Snapshot Strip (Doctor Triage Bar) -->
+<section class="bg-surface-container-low px-space-md py-2.5 flex flex-wrap items-center justify-between gap-y-2 text-on-surface shadow-inner">
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1">
+<!-- Blood Group -->
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Blood:</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">O+ (Rh Pos)</span>
+</div>
+<div class="hidden sm:block w-px h-3.5 bg-outline-variant/50"></div>
+<!-- Critical Allergy Badge (STRICT EXCLUSION RULE COMPLIED: ONLY PLACE FOR RED ACCENT) -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container">
+<span class="material-symbols-outlined text-[15px] text-error font-bold">warning</span>
+<span class="font-label-sm text-label-sm font-bold tracking-wide">Severe Allergy: Penicillin &amp; Ceph</span>
+</div>
+<div class="hidden md:block w-px h-3.5 bg-outline-variant/50"></div>
+<!-- Chronic Conditions -->
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Conditions:</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Type II DM (Insulin) • Post-PTCA (LAD Day 14)</span>
+</div>
+<div class="hidden lg:block w-px h-3.5 bg-outline-variant/50"></div>
+<!-- Latest Vitals Telemetry -->
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Vitals (Logged 08:30):</span>
+<span class="font-label-sm text-label-sm font-mono font-semibold text-secondary">BP 138/86 • HR 74 • SpO2 98%</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md font-semibold text-secondary hover:text-primary transition-colors ml-auto" href="#">
+<span class="">View Full EHR Chart</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</section>
+<!-- 3. Message Thread (Scrollable clinical discussion) -->
+<div class="flex-1 overflow-y-auto p-space-md space-y-space-md bg-surface" id="messages-container">
+<!-- Date Separator -->
+<div class="flex items-center justify-center my-space-xs">
+<span class="px-space-md py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold tracking-wide">
+            Today • 24 October 2026
+          </span>
+</div>
+<!-- 3A. Patient Message (Left-aligned) -->
+<div class="flex flex-col items-start max-w-2xl">
+<div class="flex items-center gap-2 mb-1 px-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Rajesh V. Sharma</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">08:42 AM</span>
+</div>
+<div class="p-space-md rounded-2xl rounded-tl-sm bg-surface-container text-on-surface shadow-sm">
+<p class="font-body-md text-body-md leading-relaxed">
+              Good morning Dr. Menon. I've logged my fasting BP and sugar readings for the last 3 days as requested. The morning BP was 138/86 and post-prandial was 142. Felt slight heaviness after stairs yesterday.
+            </p>
+<!-- Attached Report Card inside Patient Bubble -->
+<div class="mt-space-sm p-space-sm rounded-xl bg-surface-container-lowest flex items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">description</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">BP_Sugar_Log_Oct24.pdf</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1.2 MB • ABDM Synced Telemetry</span>
+</div>
+</div>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md font-semibold transition-colors flex items-center gap-1 flex-shrink-0" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span class="">Preview</span>
+</button>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1 px-1">Delivered to Trauma Station</span>
+</div>
+<!-- 3B. Doctor Message (Right-aligned, Dr. Kavitha Menon) -->
+<div class="flex flex-col items-end max-w-2xl ml-auto">
+<div class="flex items-center gap-2 mb-1 px-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">08:50 AM</span>
+<span class="font-label-sm text-label-sm font-bold text-primary">Dr. Kavitha Menon (You)</span>
+</div>
+<div class="p-space-md rounded-2xl rounded-tr-sm bg-primary text-on-primary shadow-md">
+<p class="font-body-md text-body-md leading-relaxed text-on-primary">
+              Thanks Rajesh. The systolic reading is trending in an acceptable range post-stent, but let's monitor that exertion heaviness closely. I am ordering a light adjustment to your Metformin and continuing the Rosuvastatin 10mg.
+            </p>
+<!-- Embedded Clinical Prescription Card -->
+<div class="mt-space-sm p-space-sm rounded-xl bg-surface-container-lowest text-on-surface flex items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">medication</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-on-surface">Digital Rx #EK-RX-99412</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] font-bold">SIGNED</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Rosuvastatin 10mg + Ecosprin 75mg (30-Day Refill)</span>
+</div>
+</div>
+<button class="px-space-sm py-1.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md font-semibold transition-colors flex items-center gap-1 flex-shrink-0" type="button">
+<span class="">View Rx</span>
+<span class="material-symbols-outlined text-[16px]">assignment</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-1 mt-1 px-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+<span class="">Read by Patient</span>
+</div>
+</div>
+<!-- 3C. Patient Response (Left-aligned) -->
+<div class="flex flex-col items-start max-w-2xl">
+<div class="flex items-center gap-2 mb-1 px-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Rajesh V. Sharma</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">09:05 AM</span>
+</div>
+<div class="p-space-md rounded-2xl rounded-tl-sm bg-surface-container text-on-surface shadow-sm">
+<p class="font-body-md text-body-md leading-relaxed">
+              Understood Doctor. Will adhere to the dosage. Should we schedule the follow-up echo next week?
+            </p>
+</div>
+</div>
+</div>
+<!-- 4. Quick Actions Bar (Clinical shortcuts above input) -->
+<div class="px-space-md py-2 bg-surface-container-low flex items-center gap-2 overflow-x-auto text-nowrap">
+<span class="font-label-sm text-label-sm font-bold text-on-surface-variant uppercase tracking-wider mr-1">Directives:</span>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest hover:bg-surface-container text-primary font-label-sm text-label-sm font-semibold shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">medication</span>
+<span class="">+ Send Prescription</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest hover:bg-surface-container text-primary font-label-sm text-label-sm font-semibold shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">monitoring</span>
+<span class="">Request Vitals Update</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest hover:bg-surface-container text-primary font-label-sm text-label-sm font-semibold shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">calendar_add_on</span>
+<span class="">Schedule Follow-up Echo</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest hover:bg-surface-container text-primary font-label-sm text-label-sm font-semibold shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">emergency</span>
+<span class="">Escalate to Bay Ward 4B</span>
+</button>
+</div>
+<!-- 5. Message Input Bar & Compliance Footer -->
+<footer class="p-space-md bg-surface-container-lowest flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs">
+<!-- Attachment action buttons -->
+<div class="flex items-center gap-1">
+<button class="w-10 h-10 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex items-center justify-center transition-colors" title="Attach Lab/DICOM" type="button">
+<span class="material-symbols-outlined text-[20px]">attach_file</span>
+</button>
+<button class="w-10 h-10 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex items-center justify-center transition-colors" title="Prescription Macros" type="button">
+<span class="material-symbols-outlined text-[20px]">prescriptions</span>
+</button>
+</div>
+<!-- Main Text Input -->
+<div class="flex-1 relative">
+<input class="w-full h-11 px-4 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container transition-all" id="clinical-reply-input" placeholder="Type a clinical directive or reply to Rajesh V. Sharma... (Enter to send, Shift+Enter for new line)" type="text">
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-2 flex-shrink-0">
+<button class="h-11 px-4 rounded-lg bg-primary hover:bg-primary/90 text-on-primary font-label-lg text-label-lg font-semibold flex items-center gap-2 transition-all shadow-sm" id="send-directive-btn" type="button">
+<span class="">Send</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="hidden sm:flex h-11 px-3.5 rounded-lg bg-secondary-container hover:bg-secondary-container/80 text-on-secondary-container font-label-md text-label-md font-semibold items-center gap-1.5 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">videocam</span>
+<span class="">Encrypted Call</span>
+</button>
+</div>
+</div>
+<!-- Compliance & Cryptographic Signoff Strip -->
+<div class="flex flex-wrap items-center justify-between text-on-surface-variant font-label-sm text-[11px] pt-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">enhanced_encryption</span>
+<span class="">ABDM End-to-End Encrypted Clinical Teleconsultation Protocol v2.4 • ISO 27799 / DISHA Compliant</span>
+</div>
+<div class="font-mono">
+            NMC Token MD-44912-TN • Validated
+          </div>
+</div>
+</footer>
+</main>
+</div>
+</div>
+<script>
+  (function() {
+    // Dropdown toggle functionality for the clinical header menu
+    const menuBtn = document.getElementById('overflow-menu-btn');
+    const dropdownMenu = document.getElementById('overflow-dropdown-menu');
+
+    if (menuBtn && dropdownMenu) {
+      menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        if (!dropdownMenu.classList.contains('hidden')) {
+          dropdownMenu.classList.add('hidden');
+        }
+      });
+    }
+
+    // Interactive message insertion for clinical typing
+    const replyInput = document.getElementById('clinical-reply-input');
+    const sendBtn = document.getElementById('send-directive-btn');
+    const messagesContainer = document.getElementById('messages-container');
+
+    function appendDoctorMessage() {
+      if (!replyInput || !messagesContainer) return;
+      const text = replyInput.value.trim();
+      if (!text) return;
+
+      const now = new Date();
+      const hours = now.getHours().toString().padStart(2, '0');
+      const mins = now.getMinutes().toString().padStart(2, '0');
+      const timeStr = `${hours}:${mins} ${now.getHours() >= 12 ? 'PM' : 'AM'}`;
+
+      const msgDiv = document.createElement('div');
+      msgDiv.className = 'flex flex-col items-end max-w-2xl ml-auto animate-fade-in';
+      msgDiv.innerHTML = `
+        <div class="flex items-center gap-2 mb-1 px-1">
+          <span class="font-label-sm text-label-sm text-on-surface-variant">${timeStr}</span>
+          <span class="font-label-sm text-label-sm font-bold text-primary">Dr. Kavitha Menon (You)</span>
+        </div>
+        <div class="p-space-md rounded-2xl rounded-tr-sm bg-primary text-on-primary shadow-md">
+          <p class="font-body-md text-body-md leading-relaxed text-on-primary">${text}</p>
+        </div>
+        <div class="flex items-center gap-1 mt-1 px-1 font-label-sm text-label-sm text-on-surface-variant">
+          <span class="material-symbols-outlined text-[14px]">done</span>
+          <span>Transmitted</span>
+        </div>
+      `;
+
+      messagesContainer.appendChild(msgDiv);
+      replyInput.value = '';
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    if (sendBtn) {
+      sendBtn.addEventListener('click', appendDoctorMessage);
+    }
+
+    if (replyInput) {
+      replyInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          appendDoctorMessage();
+        }
+      });
+    }
+  })();
+</script></main></div>
+
+
+
+</body></html>
